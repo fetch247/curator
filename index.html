@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coffee Bar Connoisseur – Playlists, Recipes &amp; Coffee Culture</title>
-  <!-- SEO metadata: describe the page for search engines -->
-  <meta name="description" content="Experience coffee culture reimagined through curated playlists, signature recipes and stories. Coffee Bar Connoisseur blends the taste of artisan brews with the rhythm of modern music across Spotify, Apple Music and more.">
-  <meta name="keywords" content="coffee playlists, DJmix Ultimate Party, 5HR Energy Drill Party, Sundown Vibes Afrobeat, Sundown Vibes Rap &amp; Reggae, Morning Brew Jazz Classics, Morning Brew Bossa Nova, HITS Women Front &amp; Center, coffee recipes, café culture, barista inspiration, signature drinks, Coffee Bar Connoisseur, Rue de Vivre">
+  <title>Coffee Bar Connoisseur – Curated Vibes &amp; Recipes</title>
+  <!-- SEO metadata for playlists and coffee culture -->
+  <meta name="description" content="Curated playlists and coffee culture combined. Explore Sundown Vibes Afrobeat, 5HR Energy Drill Party, DJmix Ultimate Party and discover our signature coffee book. Contact us for custom playlists.">
+  <meta name="keywords" content="coffee playlists, Sundown Vibes Afrobeat, 5HR Energy Drill Party, DJmix Ultimate Party, coffee recipes, barista vibes, custom playlist, Coffee Bar Connoisseur">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LXDRBPQLW"></script>
@@ -17,490 +17,216 @@
     gtag('config', 'G-8LXDRBPQLW');
   </script>
 
-  <!-- Embedded stylesheet: using Provencal/Neapolitan palette and risograph aesthetic -->
+  <!-- Embedded styles: dark cards with Matisse blue typography -->
   <style>
-    /*
-     * Global stylesheet for the Coffee Bar Connoisseur redesign.
-     *
-     * This CSS defines a soft, magazine‑like aesthetic inspired by
-     * risograph prints, Provencal Neapolitan colours and hand‑drawn line art.
-     * It uses a venetian plaster white background with butter yellow and
-     * Matisse blue accents. Headings are set in an outmoded handwritten
-     * typeface, while body text uses an elegant serif. Layout utilities
-     * for asymmetric 1:2 and 5:2 ratios allow content and playlist embeds
-     * to sit side by side without rigid rows and squares.
-     */
-
     @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
-    /* Colour palette inspired by Provencal Neapolitan tones */
+    /* Colour palette */
     :root {
-      --matisse-blue: #33658a;      /* rich Matisse blue for headings and accents */
-      --butter-yellow: #f3ce93;     /* warm butter yellow for highlights */
-      --venetian-white: #f7f5f0;    /* soft off‑white, like venetian plaster */
-      --ink-blue: #25476d;          /* dark ink for primary text and line drawings */
-      --pink-pearl: #eecdc8;        /* muted Provencal pink for gentle accents */
-      --cyan-haze: #e0ecec;         /* very pale cyan to hint at cyan‑ink lines */
-      --shadow-colour: rgba(0, 0, 0, 0.06);
+      --primary: #045997;                /* new Matisse blue */
+      --ink-blue: #045997;               /* unify text colour */
+      --card-bg: rgba(40, 40, 40, 0.9);  /* semi‑transparent dark card */
+      --highlight: #f3ce93;              /* butter yellow highlight */
+      --accent: #eecdc8;                /* pink accent */
+      --shadow: rgba(0, 0, 0, 0.1);
     }
 
-    /* Base styles */
     html, body {
       margin: 0;
       padding: 0;
-      background: var(--venetian-white);
+      background: #f7f5f0; /* keep soft off‑white background */
       color: var(--ink-blue);
       font-family: 'Cormorant Garamond', serif;
       font-size: 17px;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
-
-    /* Heading styles: handwritten, outmoded */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Caveat', cursive;
-      font-weight: 600;
-      color: var(--matisse-blue);
+      color: var(--primary);
       margin: 0;
       line-height: 1.2;
     }
-
-    /* Paragraph and text blocks */
-    p {
-      margin: 0 0 1.2rem 0;
-      color: var(--ink-blue);
-    }
-
-    .text-block {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.1rem;
-      color: var(--ink-blue);
-    }
-
-    /* Utility containers */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
     }
-
-    /* Asymmetric ratio layouts: avoid boxy grids by defining
-       columns in 1:2 and 5:2 proportions. These utilities
-       can wrap content and playlists elegantly on larger screens,
-       and stack on smaller screens. */
-    .ratio-1-2 {
+    /* Hero with logo and tagline */
+    .hero {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero img {
+      max-width: 360px;
+      width: 80%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    .hero .tagline {
+      font-size: 2rem;
+      margin-top: 0.3rem;
+    }
+    /* Layout: 2 columns (1:2 ratio) for playlist and right side */
+    .two-column {
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 2rem;
-      align-items: start;
     }
-
-    .ratio-5-2 {
-      display: grid;
-      grid-template-columns: 5fr 2fr;
-      gap: 2rem;
-      align-items: start;
-    }
-
-    /* Non‑boxy content blocks with subtle texture */
     .panel {
       padding: 2rem;
-      background: var(--venetian-white);
       border-radius: 24px;
-      box-shadow: 0 6px 24px var(--shadow-colour);
-      border: 1px solid var(--butter-yellow);
-      position: relative;
-      overflow: hidden;
+      background: var(--card-bg);
+      box-shadow: 0 6px 24px var(--shadow);
+      color: var(--ink-blue);
     }
-
-    /* Add a faint risograph grain to panels */
-    .panel::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
+    .playlist-group {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .playlist-card h3 {
+      font-family: 'Caveat', cursive;
+      font-size: 1.6rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .playlist-card iframe {
       width: 100%;
-      height: 100%;
-      background-image: repeating-radial-gradient(circle at 10% 10%, rgba(0,0,0,0.02) 0, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px);
-      opacity: 0.4;
-      pointer-events: none;
-    }
-
-    /* Line art overlay: a semi‑transparent overlay for doodles or
-       ink drawings. This can be used to position simple line art
-       atop backgrounds without adding heavy content boxes. */
-    .line-art-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      opacity: 0.5;
-      pointer-events: none;
-    }
-
-    /* Playlist embed styling: embed containers that fit naturally
-       within panels. The iframe is responsive and inherits border
-       radius for a cohesive look. */
-    .playlist-container {
-      padding: 1.5rem;
-      background: var(--venetian-white);
-      border: 1px solid var(--pink-pearl);
-      border-radius: 20px;
-      box-shadow: 0 4px 18px var(--shadow-colour);
-    }
-
-    .playlist-container iframe {
-      width: 100%;
+      height: 340px;
       border: none;
       border-radius: 12px;
-      height: 320px;
+      background: #000;
     }
-
-    /* Buttons: handwritten style with bold colours */
+    /* Bottom callout section */
+    .callout {
+      margin-top: 3rem;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 24px;
+      color: var(--ink-blue);
+      text-align: center;
+    }
+    .callout h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.6rem;
+    }
+    .callout p {
+      margin-bottom: 1rem;
+    }
     .btn {
       display: inline-block;
       padding: 0.6rem 1.6rem;
       border-radius: 32px;
-      background: var(--matisse-blue);
-      color: var(--venetian-white);
-      font-family: 'Caveat', cursive;
-      font-size: 1.4rem;
-      text-decoration: none;
-      transition: background 0.25s ease, color 0.25s ease;
-    }
-
-    .btn:hover {
-      background: var(--butter-yellow);
-      color: var(--ink-blue);
-    }
-
-    .btn-secondary {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      border-radius: 24px;
-      background: var(--butter-yellow);
-      color: var(--ink-blue);
-      font-family: 'Caveat', cursive;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: background 0.25s ease, color 0.25s ease;
-    }
-    .btn-secondary:hover {
-      background: var(--matisse-blue);
-      color: var(--venetian-white);
-    }
-
-    /* Book & video series section */
-    .book-section {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2rem;
-      margin-top: 3rem;
-      align-items: start;
-    }
-    .book-section .book-image {
-      max-width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px var(--shadow-colour);
-    }
-    .book-section .book-details {
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
-    }
-    .book-section .book-details h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      color: var(--matisse-blue);
-      margin: 0;
-    }
-    .book-section .book-details h3 {
-      font-family: 'Caveat', cursive;
-      font-size: 1.4rem;
-      color: var(--butter-yellow);
-      margin: 0.4rem 0;
-    }
-    .book-section .book-details p,
-    .book-section .book-details li {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      color: var(--ink-blue);
-      line-height: 1.4;
-    }
-    .book-section .book-details ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0.3rem 0;
-    }
-    .book-section .book-details ul li {
-      margin-bottom: 0.3rem;
-    }
-    .book-section .book-details .author {
-      font-weight: 500;
-    }
-    .book-section .book-details .tagline {
-      font-family: 'Caveat', cursive;
-      font-size: 1.2rem;
-      color: var(--matisse-blue);
-    }
-
-    /* Platform grid for multi‑platform links */
-    .platform-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .platform-card {
-      background: var(--venetian-white);
-      border: 1px solid var(--pink-pearl);
-      border-radius: 16px;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 4px 18px var(--shadow-colour);
-    }
-    .platform-card img {
-      width: 48px;
-      height: 48px;
-      margin-bottom: 0.5rem;
-    }
-    .platform-card h4 {
+      background: var(--primary);
+      color: #fff;
       font-family: 'Caveat', cursive;
       font-size: 1.3rem;
-      color: var(--matisse-blue);
-      margin-bottom: 0.4rem;
-    }
-    .platform-card a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.4rem 1rem;
-      border-radius: 22px;
-      background: var(--matisse-blue);
-      color: var(--venetian-white);
-      font-family: 'Caveat', cursive;
-      font-size: 1rem;
+      text-decoration: none;
       transition: background 0.25s ease;
     }
-    .platform-card a:hover {
-      background: var(--butter-yellow);
+    .btn:hover {
+      background: var(--highlight);
       color: var(--ink-blue);
     }
-
-    /* Recipes section */
-    .recipes {
-      margin-top: 3rem;
-    }
-    .recipes h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: var(--matisse-blue);
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 24px 24px 0 0;
+      color: var(--ink-blue);
       text-align: center;
-      margin-bottom: 1rem;
     }
-    .recipes .collage {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 4px 18px var(--shadow-colour);
-      margin-bottom: 1rem;
-    }
-    .recipe-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    .recipe-card {
-      background: var(--venetian-white);
-      border: 1px solid var(--butter-yellow);
-      border-radius: 16px;
-      box-shadow: 0 4px 18px var(--shadow-colour);
-      padding: 1.2rem;
-    }
-    .recipe-card h3 {
-      font-family: 'Caveat', cursive;
+    footer h3 {
       font-size: 1.5rem;
-      color: var(--matisse-blue);
-      margin-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
-    .recipe-card p {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 0.95rem;
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    footer .footer-links a {
+      color: var(--primary);
+      font-family: 'Caveat', cursive;
+      font-size: 1.2rem;
+      text-decoration: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 24px;
+      background: rgba(4, 89, 151, 0.1);
+      transition: background 0.2s ease;
+    }
+    footer .footer-links a:hover {
+      background: var(--highlight);
       color: var(--ink-blue);
-      margin-bottom: 0;
     }
-
-    /* Headers with accent underline to echo risograph print lines */
-    .headline {
-      display: inline-block;
-      padding-bottom: 0.3rem;
-      position: relative;
-    }
-
-    .headline::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, var(--matisse-blue), var(--butter-yellow), var(--pink-pearl));
-    }
-
-    /* Responsive adjustments: stack grid columns on small screens */
     @media (max-width: 768px) {
-      .ratio-1-2, .ratio-5-2 {
+      .two-column {
         grid-template-columns: 1fr;
-      }
-      .panel {
-        margin-bottom: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Header area with handwritten logo and tagline -->
-    <header style="text-align: center; margin-bottom: 2rem;">
-      <img src="coffee_connoisseur_matisse.png" alt="Coffee Bar Connoisseur logo" style="max-width: 340px; width: 80%; height: auto;">
-      <div class="headline" style="font-size: 2rem; margin-top: 0.5rem;">Parler&nbsp;vous&nbsp;Coffee?</div>
-      <p class="text-block" style="max-width: 640px; margin: 1rem auto 0 auto;">Where every cup of coffee has a soundtrack. Dive into our world of blends and beats, curated for cafés and creatives.</p>
-    </header>
+    <!-- Hero section with logo and tagline -->
+    <section class="hero">
+      <img src="coffee_connoisseur_matisse.png" alt="Coffee Bar Connoisseur illustration">
+      <h1 class="tagline">Parler&nbsp;vous&nbsp;Coffee?</h1>
+      <p class="text-block" style="max-width: 620px; margin: 0 auto;">Sip, savour and stream—Coffee Bar Connoisseur pairs artisan brews with hand‑picked beats. Immerse yourself in coffee culture with playlists crafted for every mood.</p>
+    </section>
 
-    <!-- Primary section: playlist column + central illustration + ads -->
-    <section class="ratio-1-2">
-      <!-- Left: playlist embeds stacked -->
+    <!-- Main layout: Playlists on the left, call to action and ads on the right -->
+    <section class="two-column">
+      <!-- Left column: playlist players -->
       <div class="panel">
-        <div class="playlist-container" style="margin-bottom: 1.5rem;">
-          <h2 class="headline" style="margin-bottom: 0.5rem;">Sundown Vibes: Afrobeat</h2>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div class="playlist-container" style="margin-bottom: 1.5rem;">
-          <h2 class="headline" style="margin-bottom: 0.5rem;">5HR Energy Drill Party</h2>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div class="playlist-container">
-          <h2 class="headline" style="margin-bottom: 0.5rem;">DJmix: Ultimate Party</h2>
-          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="playlist-group">
+          <div class="playlist-card">
+            <h3>Sundown Vibes: Afrobeat</h3>
+            <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ?utm_source=generator&amp;theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="playlist-card">
+            <h3>5HR Energy Drill Party</h3>
+            <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="playlist-card">
+            <h3>DJmix: Ultimate Party</h3>
+            <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm?utm_source=generator&amp;theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
-
-      <!-- Right side: central illustration and ads in a 5:2 ratio -->
-      <div class="ratio-5-2">
-        <!-- Centre: Coffee Connoisseur illustration and intro text -->
-        <div class="panel" style="text-align: center;">
-          <h2 class="headline">Coffee Bar Connoisseur</h2>
-          <p class="text-block">An invitation to linger over a latte and lose yourself in music. Our hand‑picked playlists are designed for the modern café and curious minds.</p>
-          <img src="coffee_connoisseur_matisse.png" alt="Coffee Bar Connoisseur illustration" style="max-width: 100%; height: auto; margin-top: 1rem;">
+      <!-- Right column: call to action and ads -->
+      <div class="panel" style="display: flex; flex-direction: column; gap: 2rem;">
+        <div>
+          <h2>Discover Our Coffee Rituals</h2>
+          <p>Our coffee recipes book guides you through espresso classics and imaginative brews. It’s time to elevate your café routine.</p>
+          <a class="btn" href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank">Explore the Book</a>
         </div>
-        <!-- Ads: coffee partner and book promotion -->
-        <div class="panel">
-          <h3 class="headline">Peet’s Coffee</h3>
-          <p class="text-block">Fuel your days with bold brews and artisanal blends. Discover your next favourite roast from Peet’s.</p>
-          <a class="btn" href="https://www.peets.com" target="_blank">Shop Peet’s</a>
-          <hr style="border:none; border-top:1px solid var(--pink-pearl); margin:2rem 0;">
-          <h3 class="headline">Our Book &amp; Video Series</h3>
-          <p class="text-block">Unlock creative coffee rituals in our book <em>Coffee Recipes: With or Without</em>. From espresso classics to Cherry Blossom Lattes.</p>
-          <a class="btn" href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank">Explore on Amazon</a>
+        <div>
+          <h2>Support Rue de Vivre</h2>
+          <p>Show some love to Rue de Vivre &amp; Coffee Bar Connoisseur by streaming or purchasing our music. Every note helps us create more vibes.</p>
+          <a class="btn" href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank">Listen on Apple Music</a>
         </div>
       </div>
     </section>
 
-    <!-- Call to action section: Rue de Vivre and follow playlists -->
-    <section class="ratio-1-2" style="margin-top: 3rem;">
-      <div class="panel">
-        <h2 class="headline">Rue&nbsp;de&nbsp;Vivre Music</h2>
-        <p class="text-block">Support Rue de Vivre &amp; Coffee Bar Connoisseur by streaming or purchasing our music. Every note helps us create more vibes.</p>
-        <a class="btn" href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank">Listen on Apple Music</a>
-      </div>
-      <div class="panel">
-        <h2 class="headline">Follow Our Playlists</h2>
-        <p class="text-block">Stay up to date with fresh mixes and playlists curated for your mood. Follow us on Spotify and never miss a beat.</p>
-        <a class="btn" href="https://open.spotify.com/user/31rm56e5ngi5elvjrs4mozpsaocm" target="_blank">Follow on Spotify</a>
-      </div>
+    <!-- Single callout section for book description and custom playlist info -->
+    <section class="callout">
+      <h2>From Steam to Soul: Coffee Recipes &amp; Playlists</h2>
+      <p>Explore the art of coffee with our illustrated recipe book and video series. Want a bespoke vibe for your shop? Reach out and we’ll curate a playlist tailored to your atmosphere.</p>
+      <a class="btn" href="mailto:info@coffeebarconnoisseur.com?subject=Custom Playlist Inquiry" target="_blank">Request a Custom Playlist</a>
     </section>
 
-    <!-- Book & video series details section -->
-    <section class="book-section">
-      <!-- Book cover image; replace with your actual cover if available -->
-      <img src="book.png" alt="Coffee Recipes book cover" class="book-image">
-      <div class="book-details">
-        <h2>Coffee Recipes: With or Without</h2>
-        <h3>From Steam to Soul: A Journey Through Modern Coffee Rituals</h3>
-        <p class="author">By Coffee Bar Connoisseur / Av&nbsp;Der</p>
-        <ul>
-          <li><strong>Category:</strong> Food &amp; Drink / Coffee Culture</li>
-          <li><strong>Video Tagline:</strong> “Coffee’s never just coffee anymore.”</li>
-          <li><strong>Ideal Audience:</strong> 20–45‑year‑olds, coffee lovers, home brewers, aesthetic creators</li>
-        </ul>
-        <p>Explore the art and play of coffee with recipes from around the world — from the classic espresso to bold creative blends like Cherry Blossom Latte and Mistress Butterscotch. Perfect for creators, home baristas and dreamers.</p>
-        <a class="btn" href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank">Get the Book</a>
+    <!-- Footer with contact and links -->
+    <footer>
+      <h3>Stay Connected</h3>
+      <div class="footer-links">
+        <a href="mailto:info@coffeebarconnoisseur.com">Contact Us</a>
+        <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank">Book Recipes</a>
+        <a href="mailto:info@coffeebarconnoisseur.com?subject=Custom Playlist Inquiry" target="_blank">Custom Playlist</a>
       </div>
-    </section>
-
-    <!-- Multi‑platform playlist links -->
-    <section class="platform-grid">
-      <div class="platform-card">
-        <h4>Spotify</h4>
-        <a href="https://open.spotify.com/playlist/7sU1PGsAAmF5y7bW6tAPsY" target="_blank">Open</a>
-      </div>
-      <div class="platform-card">
-        <h4>Apple Music</h4>
-        <a href="https://music.apple.com/us/album/rooftop-confessions/1842910284" target="_blank">Open</a>
-      </div>
-      <div class="platform-card">
-        <h4>Amazon Music</h4>
-        <a href="https://music.amazon.com/artists/B0F1NB4GF7/rue-de-vivre" target="_blank">Open</a>
-      </div>
-      <div class="platform-card">
-        <h4>YouTube Music</h4>
-        <a href="https://music.youtube.com/playlist?list=OLAK5uy_l2YcRRbJU26gH3IbUTfKSICRCyrzL95IA" target="_blank">Open</a>
-      </div>
-      <div class="platform-card">
-        <h4>YouTube Channel</h4>
-        <a href="https://www.youtube.com/@ruedevivre" target="_blank">Open</a>
-      </div>
-    </section>
-
-    <!-- Signature recipes section -->
-    <section class="recipes">
-      <h2>Chapter 2: Signature Recipes</h2>
-      <!-- Collage of recipe images; replace with your actual collage if available -->
-      <img class="collage" src="cbc-2.png" alt="Signature recipes collage">
-      <div class="recipe-list">
-        <div class="recipe-card">
-          <h3>Brownie Lovers</h3>
-          <p>Taste the Italian tradition with a greedy twist. Espresso meets almond brownie syrup, topped with crumbled brownies and nuts. Warm, decadent, unapologetic.</p>
-        </div>
-        <div class="recipe-card">
-          <h3>Cherry Blossom Latte</h3>
-          <p>Experience the sweetness of Sakura. Milk, cherry blossom syrup and espresso, finished with a flourish of strawberry and chocolate sauce.</p>
-        </div>
-        <div class="recipe-card">
-          <h3>Mistress Butterscotch</h3>
-          <p>The flavor that brings back sweet memories. Butterscotch syrup, espresso, nut milk and caramel drizzle. Best enjoyed during golden hour.</p>
-        </div>
-        <div class="recipe-card">
-          <h3>Hazelnut Latte</h3>
-          <p>Espresso layered over hazelnut syrup, topped with whipped cream, grated hazelnut and cocoa dust. Comfort in a cup.</p>
-        </div>
-        <div class="recipe-card">
-          <h3>Macadaccino</h3>
-          <p>A macadamia latte with a creamy finish. Espresso, milk and macadamia syrup — a hug disguised as caffeine.</p>
-        </div>
-        <div class="recipe-card">
-          <h3>Pistachio Gingerbread Shake</h3>
-          <p>Melted white chocolate meets pistachio ice cream and gingerbread syrup. Half milkshake, half dessert.</p>
-        </div>
-        <div class="recipe-card">
-          <h3>Cookie + Cream Affogato</h3>
-          <p>Dark chocolate, caramel syrup and ice cream blended to velvet. Pour over espresso. Indulgence squared.</p>
-        </div>
-      </div>
-    </section>
+    </footer>
   </div>
 </body>
 </html>
