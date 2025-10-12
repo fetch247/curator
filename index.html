@@ -2,234 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Coffee Bar Connoisseur – Modern Café Vibes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO metadata for the Book + Video Series -->
-  <meta name="description" content="Coffee Bar Connoisseur curates playlists and recipes for modern coffee lovers. Explore our book and video series, discover signature drinks, and vibe to our hand‑picked music across Spotify, Apple Music, Amazon, YouTube Music and more.">
-  <meta name="keywords" content="coffee recipes, coffee playlists, café vibes, espresso drinks, streaming playlists, barista culture, Coffee Bar Connoisseur, Matisse blue">
+  <title>Coffee Bar Connoisseur – Playlists, Recipes &amp; Coffee Culture</title>
+  <!-- SEO metadata: describe the page for search engines -->
+  <meta name="description" content="Experience coffee culture reimagined through curated playlists, signature recipes and stories. Coffee Bar Connoisseur blends the taste of artisan brews with the rhythm of modern music across Spotify, Apple Music and more.">
+  <meta name="keywords" content="coffee playlists, DJmix Ultimate Party, 5HR Energy Drill Party, Sundown Vibes Afrobeat, Sundown Vibes Rap &amp; Reggae, Morning Brew Jazz Classics, Morning Brew Bossa Nova, HITS Women Front &amp; Center, coffee recipes, café culture, barista inspiration, signature drinks, Coffee Bar Connoisseur, Rue de Vivre">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LXDRBPQLW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){dataLayer.push(arguments);} 
     gtag('js', new Date());
     gtag('config', 'G-8LXDRBPQLW');
   </script>
 
-  <!-- Import elegant serif and handwritten fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Caveat:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <!-- Embedded stylesheet: using Provencal/Neapolitan palette and risograph aesthetic -->
   <style>
+    /*
+     * Global stylesheet for the Coffee Bar Connoisseur redesign.
+     *
+     * This CSS defines a soft, magazine‑like aesthetic inspired by
+     * risograph prints, Provencal Neapolitan colours and hand‑drawn line art.
+     * It uses a venetian plaster white background with butter yellow and
+     * Matisse blue accents. Headings are set in an outmoded handwritten
+     * typeface, while body text uses an elegant serif. Layout utilities
+     * for asymmetric 1:2 and 5:2 ratios allow content and playlist embeds
+     * to sit side by side without rigid rows and squares.
+     */
+
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+    /* Colour palette inspired by Provencal Neapolitan tones */
     :root {
-      /* Soft palette anchored by a deep Matisse blue */
-      --primary: #33658a;
-      --secondary: #789bb5;
-      --background: #fcfdfd;
-      --card-bg: #ffffff;
-      --text-dark: #2a2a2a;
-      --border: #e5e5e5;
+      --matisse-blue: #33658a;      /* rich Matisse blue for headings and accents */
+      --butter-yellow: #f3ce93;     /* warm butter yellow for highlights */
+      --venetian-white: #f7f5f0;    /* soft off‑white, like venetian plaster */
+      --ink-blue: #25476d;          /* dark ink for primary text and line drawings */
+      --pink-pearl: #eecdc8;        /* muted Provencal pink for gentle accents */
+      --cyan-haze: #e0ecec;         /* very pale cyan to hint at cyan‑ink lines */
+      --shadow-colour: rgba(0, 0, 0, 0.06);
     }
 
-    body {
+    /* Base styles */
+    html, body {
       margin: 0;
-      background: var(--background);
-      color: var(--text-dark);
-      font-family: 'Roboto', sans-serif;
+      padding: 0;
+      background: var(--venetian-white);
+      color: var(--ink-blue);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    /* Heading styles: handwritten, outmoded */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Caveat', cursive;
+      font-weight: 600;
+      color: var(--matisse-blue);
+      margin: 0;
+      line-height: 1.2;
     }
 
-    /* Container for page content */
+    /* Paragraph and text blocks */
+    p {
+      margin: 0 0 1.2rem 0;
+      color: var(--ink-blue);
+    }
+
+    .text-block {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--ink-blue);
+    }
+
+    /* Utility containers */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 2rem;
     }
 
-    /* Header with handwritten logo */
-    .header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .header img {
-      max-width: 320px;
-      width: 80%;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-    }
-    .tagline {
-      font-family: 'Caveat', cursive;
-      font-size: 2rem;
-      color: var(--primary);
-      margin-top: 0.5rem;
+    /* Asymmetric ratio layouts: avoid boxy grids by defining
+       columns in 1:2 and 5:2 proportions. These utilities
+       can wrap content and playlists elegantly on larger screens,
+       and stack on smaller screens. */
+    .ratio-1-2 {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      align-items: start;
     }
 
-    /* Two‑column layout for playlist and ads */
-    .columns {
-      display: flex;
-      flex-wrap: wrap;
+    .ratio-5-2 {
+      display: grid;
+      grid-template-columns: 5fr 2fr;
       gap: 2rem;
+      align-items: start;
     }
-    .column {
-      flex: 1 1 50%;
-      min-width: 280px;
+
+    /* Non‑boxy content blocks with subtle texture */
+    .panel {
+      padding: 2rem;
+      background: var(--venetian-white);
+      border-radius: 24px;
+      box-shadow: 0 6px 24px var(--shadow-colour);
+      border: 1px solid var(--butter-yellow);
+      position: relative;
+      overflow: hidden;
     }
-    /* Playlist card */
-    .playlist-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      padding: 1.5rem;
-    }
-    .playlist-card h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-    .playlist-card iframe {
+
+    /* Add a faint risograph grain to panels */
+    .panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: 380px;
+      height: 100%;
+      background-image: repeating-radial-gradient(circle at 10% 10%, rgba(0,0,0,0.02) 0, rgba(0,0,0,0.02) 1px, transparent 1px, transparent 4px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    /* Line art overlay: a semi‑transparent overlay for doodles or
+       ink drawings. This can be used to position simple line art
+       atop backgrounds without adding heavy content boxes. */
+    .line-art-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    /* Playlist embed styling: embed containers that fit naturally
+       within panels. The iframe is responsive and inherits border
+       radius for a cohesive look. */
+    .playlist-container {
+      padding: 1.5rem;
+      background: var(--venetian-white);
+      border: 1px solid var(--pink-pearl);
+      border-radius: 20px;
+      box-shadow: 0 4px 18px var(--shadow-colour);
+    }
+
+    .playlist-container iframe {
+      width: 100%;
       border: none;
       border-radius: 12px;
-      background: #f1f3f5;
+      height: 320px;
     }
-    .playlist-card .cta {
-      margin-top: 1rem;
+
+    /* Buttons: handwritten style with bold colours */
+    .btn {
       display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      padding: 0.5rem 1.2rem;
+      padding: 0.6rem 1.6rem;
+      border-radius: 32px;
+      background: var(--matisse-blue);
+      color: var(--venetian-white);
+      font-family: 'Caveat', cursive;
+      font-size: 1.4rem;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn:hover {
+      background: var(--butter-yellow);
+      color: var(--ink-blue);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 0.4rem 1rem;
       border-radius: 24px;
+      background: var(--butter-yellow);
+      color: var(--ink-blue);
       font-family: 'Caveat', cursive;
-      font-size: 1.2rem;
-      transition: background 0.2s ease;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease;
     }
-    .playlist-card .cta:hover {
-      background: var(--secondary);
+    .btn-secondary:hover {
+      background: var(--matisse-blue);
+      color: var(--venetian-white);
     }
 
-    /* Ads column cards */
-    .ads {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    .ad-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-    .ad-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-    .ad-card p {
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-      color: var(--text-dark);
-    }
-    .ad-card .button {
-      display: inline-block;
-      padding: 0.6rem 1.4rem;
-      border-radius: 28px;
-      background: var(--primary);
-      color: #fff;
-      font-family: 'Caveat', cursive;
-      font-size: 1.2rem;
-      transition: background 0.2s ease;
-    }
-    .ad-card .button:hover {
-      background: var(--secondary);
-    }
-
-    /* Book and video series section */
+    /* Book & video series section */
     .book-section {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
       gap: 2rem;
-      margin: 3rem 0;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
+      margin-top: 3rem;
+      align-items: start;
+    }
+    .book-section .book-image {
+      max-width: 100%;
       border-radius: 16px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 18px var(--shadow-colour);
     }
-    .book-section img {
-      flex: 1 1 300px;
-      max-width: 350px;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-    .book-details {
-      flex: 1 1 50%;
+    .book-section .book-details {
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
-      color: var(--text-dark);
     }
-    .book-details h2 {
+    .book-section .book-details h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      color: var(--matisse-blue);
+      margin: 0;
     }
-    .book-details h3 {
+    .book-section .book-details h3 {
       font-family: 'Caveat', cursive;
-      font-size: 1.5rem;
-      color: var(--secondary);
-      margin: 0.3rem 0;
+      font-size: 1.4rem;
+      color: var(--butter-yellow);
+      margin: 0.4rem 0;
     }
-    .book-details ul {
+    .book-section .book-details p,
+    .book-section .book-details li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--ink-blue);
+      line-height: 1.4;
+    }
+    .book-section .book-details ul {
       list-style: none;
       padding-left: 0;
-      margin: 0.5rem 0;
-    }
-    .book-details ul li {
       margin: 0.3rem 0;
-      font-size: 0.95rem;
     }
-    .book-details .author {
+    .book-section .book-details ul li {
+      margin-bottom: 0.3rem;
+    }
+    .book-section .book-details .author {
       font-weight: 500;
-      font-size: 1rem;
     }
-    .book-details .tagline {
+    .book-section .book-details .tagline {
       font-family: 'Caveat', cursive;
       font-size: 1.2rem;
-      color: var(--primary);
-      margin-top: 0.5rem;
+      color: var(--matisse-blue);
     }
 
-    /* Playlist links grid */
+    /* Platform grid for multi‑platform links */
     .platform-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1.5rem;
-      margin: 3rem 0;
+      margin-top: 3rem;
     }
     .platform-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
+      background: var(--venetian-white);
+      border: 1px solid var(--pink-pearl);
+      border-radius: 16px;
       padding: 1.5rem;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 18px var(--shadow-colour);
     }
     .platform-card img {
       width: 48px;
@@ -238,8 +271,8 @@
     }
     .platform-card h4 {
       font-family: 'Caveat', cursive;
-      font-size: 1.4rem;
-      color: var(--primary);
+      font-size: 1.3rem;
+      color: var(--matisse-blue);
       margin-bottom: 0.4rem;
     }
     .platform-card a {
@@ -247,154 +280,196 @@
       margin-top: 0.5rem;
       padding: 0.4rem 1rem;
       border-radius: 22px;
-      background: var(--primary);
-      color: #fff;
+      background: var(--matisse-blue);
+      color: var(--venetian-white);
       font-family: 'Caveat', cursive;
       font-size: 1rem;
-      transition: background 0.2s ease;
+      transition: background 0.25s ease;
     }
     .platform-card a:hover {
-      background: var(--secondary);
+      background: var(--butter-yellow);
+      color: var(--ink-blue);
     }
 
     /* Recipes section */
     .recipes {
-      margin: 3rem 0;
+      margin-top: 3rem;
     }
     .recipes h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem;
-      color: var(--primary);
+      font-size: 2rem;
+      color: var(--matisse-blue);
       text-align: center;
       margin-bottom: 1rem;
     }
     .recipes .collage {
       width: 100%;
-      border-radius: 16px;
-      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 4px 18px var(--shadow-colour);
       margin-bottom: 1rem;
     }
     .recipe-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
     .recipe-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      background: var(--venetian-white);
+      border: 1px solid var(--butter-yellow);
+      border-radius: 16px;
+      box-shadow: 0 4px 18px var(--shadow-colour);
       padding: 1.2rem;
     }
     .recipe-card h3 {
       font-family: 'Caveat', cursive;
-      font-size: 1.6rem;
-      color: var(--primary);
+      font-size: 1.5rem;
+      color: var(--matisse-blue);
       margin-bottom: 0.4rem;
     }
     .recipe-card p {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem;
-      color: var(--text-dark);
+      color: var(--ink-blue);
+      margin-bottom: 0;
     }
 
-    /* Responsive adjustments */
+    /* Headers with accent underline to echo risograph print lines */
+    .headline {
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      position: relative;
+    }
+
+    .headline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--matisse-blue), var(--butter-yellow), var(--pink-pearl));
+    }
+
+    /* Responsive adjustments: stack grid columns on small screens */
     @media (max-width: 768px) {
-      .columns {
-        flex-direction: column;
+      .ratio-1-2, .ratio-5-2 {
+        grid-template-columns: 1fr;
       }
-      .column {
-        flex: 1 1 100%;
+      .panel {
+        margin-bottom: 1.5rem;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="container">
-    <!-- Header with handwritten logo -->
-    <div class="header">
-      <!-- The logo image should be placed in the same directory -->
-      <img src="coffee_connoisseur_matisse.png" alt="Coffee Bar Connoisseur logo">
-      <div class="tagline">Parler vous Coffee?</div>
-    </div>
+    <!-- Header area with handwritten logo and tagline -->
+    <header style="text-align: center; margin-bottom: 2rem;">
+      <img src="coffee_connoisseur_matisse.png" alt="Coffee Bar Connoisseur logo" style="max-width: 340px; width: 80%; height: auto;">
+      <div class="headline" style="font-size: 2rem; margin-top: 0.5rem;">Parler&nbsp;vous&nbsp;Coffee?</div>
+      <p class="text-block" style="max-width: 640px; margin: 1rem auto 0 auto;">Where every cup of coffee has a soundtrack. Dive into our world of blends and beats, curated for cafés and creatives.</p>
+    </header>
 
-    <!-- Two columns: playlist on the left, ads on the right -->
-    <div class="columns">
-      <div class="column">
-        <div class="playlist-card">
-          <h2>Coffee Bar Connoisseur Playlist</h2>
-          <iframe src="https://open.spotify.com/embed/playlist/7sU1PGsAAmF5y7bW6tAPsY" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-          <a class="cta" href="https://open.spotify.com/playlist/7sU1PGsAAmF5y7bW6tAPsY" target="_blank">Listen on Spotify</a>
+    <!-- Primary section: playlist column + central illustration + ads -->
+    <section class="ratio-1-2">
+      <!-- Left: playlist embeds stacked -->
+      <div class="panel">
+        <div class="playlist-container" style="margin-bottom: 1.5rem;">
+          <h2 class="headline" style="margin-bottom: 0.5rem;">Sundown Vibes: Afrobeat</h2>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="playlist-container" style="margin-bottom: 1.5rem;">
+          <h2 class="headline" style="margin-bottom: 0.5rem;">5HR Energy Drill Party</h2>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei?utm_source=generator" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+        <div class="playlist-container">
+          <h2 class="headline" style="margin-bottom: 0.5rem;">DJmix: Ultimate Party</h2>
+          <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm?utm_source=generator&amp;theme=0" width="100%" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
       </div>
-      <div class="column ads">
-        <!-- Ad for Peet's Coffee -->
-        <div class="ad-card">
-          <h3>Peet’s Coffee</h3>
-          <p>Fuel your day with bold brews and artisanal blends from Peet’s. Discover your next favorite roast.</p>
-          <a class="button" href="https://www.peets.com" target="_blank">Shop Peet’s</a>
+
+      <!-- Right side: central illustration and ads in a 5:2 ratio -->
+      <div class="ratio-5-2">
+        <!-- Centre: Coffee Connoisseur illustration and intro text -->
+        <div class="panel" style="text-align: center;">
+          <h2 class="headline">Coffee Bar Connoisseur</h2>
+          <p class="text-block">An invitation to linger over a latte and lose yourself in music. Our hand‑picked playlists are designed for the modern café and curious minds.</p>
+          <img src="coffee_connoisseur_matisse.png" alt="Coffee Bar Connoisseur illustration" style="max-width: 100%; height: auto; margin-top: 1rem;">
         </div>
-        <!-- Ad for the Book + Video Series -->
-        <div class="ad-card">
-          <h3>Coffee Recipes: With or Without</h3>
-          <p>From steam to soul, our book and video series explores modern coffee rituals and creative blends.</p>
-          <a class="button" href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank">Explore the Series</a>
+        <!-- Ads: coffee partner and book promotion -->
+        <div class="panel">
+          <h3 class="headline">Peet’s Coffee</h3>
+          <p class="text-block">Fuel your days with bold brews and artisanal blends. Discover your next favourite roast from Peet’s.</p>
+          <a class="btn" href="https://www.peets.com" target="_blank">Shop Peet’s</a>
+          <hr style="border:none; border-top:1px solid var(--pink-pearl); margin:2rem 0;">
+          <h3 class="headline">Our Book &amp; Video Series</h3>
+          <p class="text-block">Unlock creative coffee rituals in our book <em>Coffee Recipes: With or Without</em>. From espresso classics to Cherry Blossom Lattes.</p>
+          <a class="btn" href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank">Explore on Amazon</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Book & Video Series details section -->
+    <!-- Call to action section: Rue de Vivre and follow playlists -->
+    <section class="ratio-1-2" style="margin-top: 3rem;">
+      <div class="panel">
+        <h2 class="headline">Rue&nbsp;de&nbsp;Vivre Music</h2>
+        <p class="text-block">Support Rue de Vivre &amp; Coffee Bar Connoisseur by streaming or purchasing our music. Every note helps us create more vibes.</p>
+        <a class="btn" href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank">Listen on Apple Music</a>
+      </div>
+      <div class="panel">
+        <h2 class="headline">Follow Our Playlists</h2>
+        <p class="text-block">Stay up to date with fresh mixes and playlists curated for your mood. Follow us on Spotify and never miss a beat.</p>
+        <a class="btn" href="https://open.spotify.com/user/31rm56e5ngi5elvjrs4mozpsaocm" target="_blank">Follow on Spotify</a>
+      </div>
+    </section>
+
+    <!-- Book & video series details section -->
     <section class="book-section">
-      <img src="book.png" alt="Coffee Recipes book cover">
+      <!-- Book cover image; replace with your actual cover if available -->
+      <img src="book.png" alt="Coffee Recipes book cover" class="book-image">
       <div class="book-details">
         <h2>Coffee Recipes: With or Without</h2>
         <h3>From Steam to Soul: A Journey Through Modern Coffee Rituals</h3>
-        <p class="author">By Coffee Bar Connoisseur / Av Der</p>
+        <p class="author">By Coffee Bar Connoisseur / Av&nbsp;Der</p>
         <ul>
           <li><strong>Category:</strong> Food &amp; Drink / Coffee Culture</li>
           <li><strong>Video Tagline:</strong> “Coffee’s never just coffee anymore.”</li>
           <li><strong>Ideal Audience:</strong> 20–45‑year‑olds, coffee lovers, home brewers, aesthetic creators</li>
         </ul>
-        <p>Explore the art and play of coffee with recipes from around the world — from classic espresso to bold creative blends like Cherry Blossom Latte and Mistress Butterscotch. Perfect for creators, home baristas and dreamers.</p>
+        <p>Explore the art and play of coffee with recipes from around the world — from the classic espresso to bold creative blends like Cherry Blossom Latte and Mistress Butterscotch. Perfect for creators, home baristas and dreamers.</p>
+        <a class="btn" href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank">Get the Book</a>
       </div>
     </section>
 
-    <!-- Responsive grid for multi‑platform playlist links -->
+    <!-- Multi‑platform playlist links -->
     <section class="platform-grid">
       <div class="platform-card">
-        <img src="spotify.png" alt="Spotify logo">
         <h4>Spotify</h4>
         <a href="https://open.spotify.com/playlist/7sU1PGsAAmF5y7bW6tAPsY" target="_blank">Open</a>
       </div>
       <div class="platform-card">
-        <img src="book.png" alt="Apple Music logo" style="visibility:hidden;">
         <h4>Apple Music</h4>
         <a href="https://music.apple.com/us/album/rooftop-confessions/1842910284" target="_blank">Open</a>
       </div>
       <div class="platform-card">
-        <img src="book.png" alt="Amazon Music logo" style="visibility:hidden;">
         <h4>Amazon Music</h4>
         <a href="https://music.amazon.com/artists/B0F1NB4GF7/rue-de-vivre" target="_blank">Open</a>
       </div>
       <div class="platform-card">
-        <img src="book.png" alt="YouTube Music logo" style="visibility:hidden;">
         <h4>YouTube Music</h4>
         <a href="https://music.youtube.com/playlist?list=OLAK5uy_l2YcRRbJU26gH3IbUTfKSICRCyrzL95IA" target="_blank">Open</a>
       </div>
       <div class="platform-card">
-        <img src="book.png" alt="YouTube logo" style="visibility:hidden;">
         <h4>YouTube Channel</h4>
         <a href="https://www.youtube.com/@ruedevivre" target="_blank">Open</a>
       </div>
     </section>
 
-    <!-- Signature Recipes Section -->
+    <!-- Signature recipes section -->
     <section class="recipes">
       <h2>Chapter 2: Signature Recipes</h2>
-      <!-- Collage from uploaded image -->
-      <img class="collage" src="book.png" alt="Signature recipes collage">
-      <!-- List of recipes with descriptions -->
+      <!-- Collage of recipe images; replace with your actual collage if available -->
+      <img class="collage" src="cbc-2.png" alt="Signature recipes collage">
       <div class="recipe-list">
         <div class="recipe-card">
           <h3>Brownie Lovers</h3>
