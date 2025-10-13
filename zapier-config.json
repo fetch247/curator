@@ -1,0 +1,88 @@
+{
+  "brand": {
+    "name": "Coffee Bar Connoisseur",
+    "website": "https://coffeebarconnoisseur.com",
+    "logo_url": "https://coffeebarconnoisseur.com/coffee_connoisseur_matisse.png",
+    "hashtags": [
+      "#CoffeeBarConnoisseur",
+      "#RueDeVivre", 
+      "#CuratedVibes",
+      "#CoffeeAndMusic",
+      "#PlaylistUpdate",
+      "#WeeklyVibes"
+    ]
+  },
+  "playlists": {
+    "4qPIPw6PIfUFIpsoFrAIlQ": {
+      "name": "Sundown Vibes: Afrobeat",
+      "description": "Golden hour energy with smooth afrobeat rhythms. Perfect for winding down with your favorite brew.",
+      "hashtags": ["#Afrobeat", "#SundownVibes", "#GoldenHour"],
+      "category": "sundown",
+      "mood": "relaxed"
+    },
+    "1EaQK9jmCLaYt4kUwXzyei": {
+      "name": "5HR Energy Drill Party", 
+      "description": "High-octane drill beats to fuel your energy. Turn up the volume and feel the power.",
+      "hashtags": ["#DrillParty", "#EnergyBoost", "#HighVibe"],
+      "category": "energy",
+      "mood": "high_energy"
+    },
+    "6mpnPV8vQlyPAJ8mgrB3Cm": {
+      "name": "DJmix: Ultimate Party",
+      "description": "The ultimate party mix for when you need maximum energy. Let the beats take control.",
+      "hashtags": ["#UltimateParty", "#DJMix", "#FestivalVibes"],
+      "category": "party",
+      "mood": "festival"
+    },
+    "2S676Ysy6lBZkYqdHFYQoQ": {
+      "name": "HITS: Women Front & Center",
+      "description": "Celebrating incredible female artists and their powerful voices.",
+      "hashtags": ["#WomenInMusic", "#Hits", "#Empowerment"],
+      "category": "hits",
+      "mood": "empowering"
+    },
+    "1hKhrLHN4WliXFzH2DuAjB": {
+      "name": "MorningBrew Bossa Nova Chill",
+      "description": "Smooth bossa nova vibes to start your day right.",
+      "hashtags": ["#BossaNova", "#MorningBrew", "#ChillVibes"],
+      "category": "morning",
+      "mood": "chill"
+    },
+    "3WC0mTKjR0Q8HdAnYP5zCt": {
+      "name": "MorningBrew Jazz Classics LOFI",
+      "description": "Classic jazz with modern lofi production for relaxed mornings.",
+      "hashtags": ["#JazzClassics", "#Lofi", "#CoffeeShopVibes"],
+      "category": "morning",
+      "mood": "cozy"
+    },
+    "5W7z4W93kHJU8HIgYxYU0J": {
+      "name": "Sundown Vibes | Rap Reggae 10 HR BLISS",
+      "description": "Extended rap and reggae vibes for your evening wind-down.",
+      "hashtags": ["#RapReggae", "#10HourBliss", "#Sundown"],
+      "category": "sundown", 
+      "mood": "extended"
+    },
+    "7sU1PGsAAmF5y7bW6tAPsY": {
+      "name": "Spotify Chart Toppers - Gym, Coffee, likes",
+      "description": "Current hits perfect for workouts and coffee sessions.",
+      "hashtags": ["#ChartToppers", "#GymMusic", "#CoffeeTime"],
+      "category": "trending",
+      "mood": "motivational"
+    }
+  },
+  "posting_schedule": {
+    "day": "Wednesday",
+    "time": "09:00",
+    "timezone": "UTC",
+    "frequency": "weekly",
+    "rotation": "playlist_cycle"
+  },
+  "social_media": {
+    "platforms": ["facebook", "instagram", "threads", "youtube"],
+    "template": "🎵 Fresh vibes brewing! ☕️\n\n{playlist_name} has been updated with new tracks to match your energy!\n\nStream the perfect soundtrack for your coffee moments: {spotify_url}\n\n{playlist_hashtags}\n{brand_hashtags}",
+    "image_options": [
+      "coffee_connoisseur_matisse.png",
+      "spotify-logo.png"
+    ]
+  }
+}
