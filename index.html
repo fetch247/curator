@@ -310,6 +310,70 @@
       transform: scale(1.05);
     }
 
+    /* Coffee Purchase Box Styles */
+    .coffee-purchase-box {
+      background: linear-gradient(135deg, rgba(255, 179, 71, 0.1), rgba(139, 92, 246, 0.1));
+      border-left: 4px solid var(--accent-amber);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .coffee-purchase-box:hover {
+      box-shadow: 0 0 30px rgba(255, 179, 71, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .coffee-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 15px rgba(57, 255, 20, 0.3));
+      transition: all 0.3s ease;
+    }
+
+    .coffee-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 20px rgba(57, 255, 20, 0.5));
+    }
+
+    .package-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 15px rgba(255, 179, 71, 0.3));
+      transition: all 0.3s ease;
+    }
+
+    .package-image:hover {
+      filter: drop-shadow(0 0 20px rgba(255, 179, 71, 0.5));
+    }
+
+    .coffee-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .btn-coffee {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .btn-coffee:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
     /* Card Headers */
     .card-title {
       font-family: 'Orbitron', sans-serif;
@@ -642,11 +706,31 @@
 
       <!-- Coffee Book Ad -->
       <div class="sidebar-card card-book">
+        <div style="text-align: center; margin-bottom: 1rem;">
+          <img src="https://github.com/fetch247/curator/raw/main/coffee_connoisseur.png" alt="Coffee Bar Connoisseur Logo" class="coffee-logo" />
+        </div>
         <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">📖 Coffee Rituals</h3>
         <p class="card-description" style="font-size: 0.9rem;">Our coffee recipes book guides you through espresso classics and imaginative brews.</p>
         <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
           <span>📖</span> Explore the Book
         </a>
+      </div>
+
+      <!-- Coffee Purchase Box -->
+      <div class="sidebar-card coffee-purchase-box">
+        <div style="text-align: center; margin-bottom: 1rem;">
+          <img src="https://github.com/fetch247/curator/raw/main/package%20header.png" alt="Coffee Package" class="package-image" />
+        </div>
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-amber);">☕ Premium Coffee</h3>
+        <p class="card-description" style="font-size: 0.9rem;">Get the perfect coffee beans to match your playlist vibes. Curated selections for every taste.</p>
+        <div class="coffee-buttons">
+          <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-amber), var(--accent-purple)); color: white;">
+            <span>🛒</span> Buy Coffee Beans
+          </a>
+          <a href="mailto:info@coffeebarconnoisseur.com?subject=Coffee Inquiry" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-green), var(--accent-blue)); color: white;">
+            <span>📧</span> Custom Blend Request
+          </a>
+        </div>
       </div>
 
       <!-- Apple Music Ad -->
