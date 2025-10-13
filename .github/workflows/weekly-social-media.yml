@@ -1,0 +1,115 @@
+name: Weekly Social Media Automation
+
+on:
+  schedule:
+    # Run every Wednesday at 9:00 AM UTC (adjust timezone as needed)
+    - cron: '0 9 * * 3'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  social-media-post:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Get current date
+      id: date
+      run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      
+    - name: Get playlist for this week
+      id: playlist
+      run: |
+        # Rotate through playlists weekly
+        week_number=$(date +%W)
+        playlists=(
+          "4qPIPw6PIfUFIpsoFrAIlQ|Sundown Vibes: Afrobeat"
+          "1EaQK9jmCLaYt4kUwXzyei|5HR Energy Drill Party"
+          "6mpnPV8vQlyPAJ8mgrB3Cm|DJmix: Ultimate Party"
+          "2S676Ysy6lBZkYqdHFYQoQ|HITS: Women Front & Center"
+          "1hKhrLHN4WliXFzH2DuAjB|MorningBrew Bossa Nova Chill"
+          "3WC0mTKjR0Q8HdAnYP5zCt|MorningBrew Jazz Classics LOFI"
+          "5W7z4W93kHJU8HIgYxYU0J|Sundown Vibes | Rap Reggae 10 HR BLISS"
+          "7sU1PGsAAmF5y7bW6tAPsY|Spotify Chart Toppers - Gym, Coffee, likes"
+        )
+        
+        playlist_index=$((week_number % 8))
+        selected_playlist="${playlists[$playlist_index]}"
+        
+        playlist_id=$(echo "$selected_playlist" | cut -d'|' -f1)
+        playlist_name=$(echo "$selected_playlist" | cut -d'|' -f2)
+        
+        echo "playlist_id=$playlist_id" >> $GITHUB_OUTPUT
+        echo "playlist_name=$playlist_name" >> $GITHUB_OUTPUT
+        
+    - name: Create social media content
+      id: content
+      run: |
+        playlist_id="${{ steps.playlist.outputs.playlist_id }}"
+        playlist_name="${{ steps.playlist.outputs.playlist_name }}"
+        
+        # Generate hashtags based on playlist
+        case "$playlist_id" in
+          "4qPIPw6PIfUFIpsoFrAIlQ")
+            hashtags="#Afrobeat #SundownVibes #GoldenHour"
+            ;;
+          "1EaQK9jmCLaYt4kUwXzyei")
+            hashtags="#DrillParty #EnergyBoost #HighVibe"
+            ;;
+          "6mpnPV8vQlyPAJ8mgrB3Cm")
+            hashtags="#UltimateParty #DJMix #FestivalVibes"
+            ;;
+          "2S676Ysy6lBZkYqdHFYQoQ")
+            hashtags="#WomenInMusic #Hits #Empowerment"
+            ;;
+          "1hKhrLHN4WliXFzH2DuAjB")
+            hashtags="#BossaNova #MorningBrew #ChillVibes"
+            ;;
+          "3WC0mTKjR0Q8HdAnYP5zCt")
+            hashtags="#JazzClassics #Lofi #CoffeeShopVibes"
+            ;;
+          "5W7z4W93kHJU8HIgYxYU0J")
+            hashtags="#RapReggae #10HourBliss #Sundown"
+            ;;
+          "7sU1PGsAAmF5y7bW6tAPsY")
+            hashtags="#ChartToppers #GymMusic #CoffeeTime"
+            ;;
+          *)
+            hashtags="#MusicDiscovery #CoffeeCulture"
+            ;;
+        esac
+        
+        # Create the social media post content
+        post_content="🎵 Fresh vibes brewing! ☕️
+
+$playlist_name has been updated with new tracks to match your energy!
+
+Stream the perfect soundtrack for your coffee moments: https://open.spotify.com/playlist/$playlist_id
+
+$hashtags
+#CoffeeBarConnoisseur #RueDeVivre #CuratedVibes
+#CoffeeAndMusic #PlaylistUpdate #WeeklyVibes"
+
+        echo "post_content<<EOF" >> $GITHUB_OUTPUT
+        echo "$post_content" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+        
+    - name: Trigger Zapier webhook
+      run: |
+        curl -X POST "${{ secrets.ZAPIER_WEBHOOK_URL }}" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "playlist_id": "${{ steps.playlist.outputs.playlist_id }}",
+            "playlist_name": "${{ steps.playlist.outputs.playlist_name }}",
+            "post_content": ${{ toJson(steps.content.outputs.post_content) }},
+            "spotify_url": "https://open.spotify.com/playlist/${{ steps.playlist.outputs.playlist_id }}",
+            "date": "${{ steps.date.outputs.date }}",
+            "trigger": "github_action"
+          }'
+          
+    - name: Log success
+      run: |
+        echo "✅ Social media post scheduled for: ${{ steps.playlist.outputs.playlist_name }}"
+        echo "📅 Date: ${{ steps.date.outputs.date }}"
+        echo "🔗 Spotify URL: https://open.spotify.com/playlist/${{ steps.playlist.outputs.playlist_id }}"
