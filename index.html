@@ -1,8 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Bar Connoisseur ╬ô├ç├┤ High Vibe Edition</title>
+    <meta name="description" content="Coffee Bar Connoisseur ΓÇô High Vibe Edition. Discover curated playlists and coffee culture: best coffee brewing method 2025, cold brew vs espresso, easy coffee recipes at home, aesthetic coffee setup ideas, CBD coffee benefits, nut milk latte recipes, barista latte art tips, coffee dessert pairing, iced coffee hacks.">
+    <meta name="keywords" content="best coffee brewing method 2025, cold brew vs espresso, easy coffee recipes at home, aesthetic coffee setup ideas, how to make dalgona coffee, CBD coffee benefits, nut milk latte recipes, barista latte art tips, coffee dessert pairing, iced coffee hacks, CoffeeRecipes, BaristaAtHome, CafeVibes, LatteArt, ColdBrew, CoffeeLovers, ButterscotchLatte, BrownieCoffee, CoffeeTok, SakuraLatte">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LXDRBPQLW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8LXDRBPQLW');
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #18181f;
+      --accent-green: #39ff14;
+      --accent-blue: #00ccff;
+      --accent-pink: #ff0066;
+      --accent-amber: #ffb347;
+      --accent-purple: #8b5cf6;
+      --text-primary: #f1f1f1;
+      --text-secondary: #a1a1aa;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --shadow-neon: 0 0 20px rgba(57, 255, 20, 0.3);
+      --shadow-hover: 0 0 30px rgba(57, 255, 20, 0.5);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+      color: var(--text-primary);
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Animated background particles */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 80%, rgba(57, 255, 20, 0.03) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255, 0, 102, 0.03) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 40%, rgba(0, 204, 255, 0.02) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Header Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+      position: relative;
+    }
+
+    .hero-logo {
+      width: 280px;
+      max-width: 80%;
+      border-radius: 20px;
+      filter: drop-shadow(0 0 30px rgba(57, 255, 20, 0.4));
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .hero-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 40px rgba(57, 255, 20, 0.6));
+    }
+
+    .hero h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+      margin-bottom: 1rem;
+      animation: neonFlicker 4s infinite alternate;
+      letter-spacing: 2px;
+    }
+
+    @keyframes neonFlicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 0 0 20px rgba(57, 255, 20, 0.5),
+                     0 0 40px rgba(57, 255, 20, 0.3),
+                     0 0 60px rgba(57, 255, 20, 0.1);
+      }
+      20%, 24%, 55% {
+        text-shadow: 0 0 10px rgba(57, 255, 20, 0.3),
+                     0 0 20px rgba(57, 255, 20, 0.1);
+      }
+    }
+
+    .hero .tagline {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      margin-bottom: 2rem;
+    }
+
+    /* Main Container - Two Column Layout */
+    .main-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* Featured Playlists (Left Side) */
+    .featured-playlists {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    /* Sidebar (Right Side) */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      position: sticky;
+      top: 2rem;
+    }
+
+    /* Glassmorphism Cards */
+    .playlist-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      padding: 2rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .playlist-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.02), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .playlist-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(57, 255, 20, 0.3);
+    }
+
+    .playlist-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Card Type Variants */
+    .card-sundown {
+      border-left: 4px solid var(--accent-amber);
+    }
+
+    .card-sundown:hover {
+      box-shadow: 0 0 30px rgba(255, 179, 71, 0.4);
+    }
+
+    .card-energy {
+      border-left: 4px solid var(--accent-pink);
+    }
+
+    .card-energy:hover {
+      box-shadow: 0 0 30px rgba(255, 0, 102, 0.4);
+    }
+
+    .card-party {
+      border-left: 4px solid var(--accent-blue);
+    }
+
+    .card-party:hover {
+      box-shadow: 0 0 30px rgba(0, 204, 255, 0.4);
+    }
+
+    .card-book {
+      border-left: 4px solid var(--accent-purple);
+    }
+
+    .card-book:hover {
+      box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+    }
+
+    .card-apple {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 0, 102, 0.1));
+      border-left: 4px solid var(--accent-green);
+    }
+
+    .card-apple:hover {
+      box-shadow: 0 0 30px rgba(57, 255, 20, 0.4);
+    }
+
+    /* Sidebar Cards - Smaller and Rotating */
+    .sidebar-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      border: 1px solid var(--glass-border);
+      padding: 1.5rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      min-height: 200px;
+    }
+
+    .sidebar-card:hover {
+      transform: translateY(-4px) rotateY(5deg);
+      box-shadow: var(--shadow-hover);
+    }
+
+    /* Carousel Styles */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+      animation: slide 15s infinite;
+    }
+
+    @keyframes slide {
+      0%, 20% { transform: translateX(0); }
+      25%, 45% { transform: translateX(-100%); }
+      50%, 70% { transform: translateX(-200%); }
+      75%, 95% { transform: translateX(-300%); }
+      100% { transform: translateX(0); }
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      padding: 0 0.5rem;
+    }
+
+    /* Compact Playlist Cards */
+    .compact-playlist {
+      background: var(--glass-bg);
+      backdrop-filter: blur(15px);
+      border-radius: 16px;
+      border: 1px solid var(--glass-border);
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .compact-playlist:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    }
+
+    .compact-playlist h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .compact-playlist p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.8rem;
+    }
+
+    .compact-playlist a {
+      font-size: 0.75rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+      color: #000;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .compact-playlist a:hover {
+      transform: scale(1.05);
+    }
+
+    /* Coffee Purchase Box Styles */
+    .coffee-purchase-box {
+      background: linear-gradient(135deg, rgba(255, 179, 71, 0.1), rgba(139, 92, 246, 0.1));
+      border-left: 4px solid var(--accent-amber);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .coffee-purchase-box:hover {
+      box-shadow: 0 0 30px rgba(255, 179, 71, 0.4);
+      transform: translateY(-4px);
+    }
+
+    .coffee-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 15px rgba(57, 255, 20, 0.3));
+      transition: all 0.3s ease;
+    }
+
+    .coffee-logo:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 20px rgba(57, 255, 20, 0.5));
+    }
+
+    .package-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      filter: drop-shadow(0 0 15px rgba(255, 179, 71, 0.3));
+      transition: all 0.3s ease;
+    }
+
+    .package-image:hover {
+      filter: drop-shadow(0 0 20px rgba(255, 179, 71, 0.5));
+    }
+
+    .coffee-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .btn-coffee {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .btn-coffee:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Card Headers */
+    .card-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, var(--text-primary), var(--text-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-description {
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* Spotify Embeds */
+    .spotify-embed {
+      width: 100%;
+      height: 352px;
+      border: none;
+      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
+      color: #000;
+      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.5);
+    }
+
+    .btn-apple {
+      background: linear-gradient(45deg, #ff6b6b, #ffa726, #42a5f5);
+      color: white;
+      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    }
+
+    .btn-apple:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+    }
+
+    /* Callout Section */
+    .callout {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      border-radius: 32px;
+      margin: 3rem 2rem;
+      border: 1px solid var(--glass-border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .callout::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(57, 255, 20, 0.1), transparent);
+      animation: rotate 10s linear infinite;
+    }
+
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .callout-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .callout h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(45deg, var(--accent-pink), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 20px rgba(255, 0, 102, 0.3);
+    }
+
+    .callout p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--glass-border);
+      margin-top: 4rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links a {
+      color: var(--accent-green);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .footer-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-green);
+      transition: width 0.3s ease;
+    }
+
+    .footer-links a:hover::after {
+      width: 100%;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-blue);
+      text-shadow: 0 0 8px rgba(0, 204, 255, 0.5);
+    }
+
+    .footer-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .main-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .sidebar {
+        position: static;
+        order: -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .main-container {
+        padding: 1rem;
+        gap: 1.5rem;
+      }
+      
+      .playlist-card {
+        padding: 1.5rem;
+      }
+      
+      .sidebar-card {
+        padding: 1.2rem;
+      }
+      
+      .callout {
+        margin: 2rem 1rem;
+        padding: 3rem 1.5rem;
+      }
+      
+      .callout h2 {
+        font-size: 2rem;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 2rem 1rem;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero .tagline {
+        font-size: 1rem;
+      }
+    }
+
+    /* Loading Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.6s ease-out;
+    }\r\n  </style>
+</head>
+<body>
+  <section class="hero fade-in">
+    <img src="coffee_connoisseur.png" alt="Coffee Bar Connoisseur" class="hero-logo" />
+    <h1>Coffee Bar Connoisseur</h1>
+    <p class="tagline">Playlists brewed to match your energy</p>
+  </section>
+
+  <section class="main-container">
+    <!-- Featured Playlists (Left Side) -->
+    <div class="featured-playlists">
+      <div class="playlist-card card-sundown fade-in">
+        <h3 class="card-title">Sundown Vibes: Afrobeat</h3>
+        <p class="card-description">Golden hour energy with smooth afrobeat rhythms. Perfect for winding down with your favorite brew.</p>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ?utm_source=generator&amp;theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <a href="https://open.spotify.com/playlist/4qPIPw6PIfUFIpsoFrAIlQ" target="_blank" class="btn btn-primary">
+          <span>╬ô├╗Γòó</span> Stream the Vibe
+        </a>
+      </div>
+
+      <div class="playlist-card card-energy fade-in">
+        <h3 class="card-title">5HR Energy Drill Party</h3>
+        <p class="card-description">High-octane drill beats to fuel your energy. Turn up the volume and feel the power.</p>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <a href="https://open.spotify.com/playlist/1EaQK9jmCLaYt4kUwXzyei" target="_blank" class="btn btn-primary">
+          <span>╬ô├╗Γòó</span> Stream the Vibe
+        </a>
+      </div>
+
+      <div class="playlist-card card-party fade-in">
+        <h3 class="card-title">DJmix: Ultimate Party</h3>
+        <p class="card-description">The ultimate party mix for when you need maximum energy. Let the beats take control.</p>
+        <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm?utm_source=generator&amp;theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <a href="https://open.spotify.com/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" target="_blank" class="btn btn-primary">
+          <span>╬ô├╗Γòó</span> Stream the Vibe
+        </a>
+      </div>
+      <!-- Acicalao Reggaeton Vibes (embedded after DJmix) -->
+      <div class="playlist-card card-party fade-in">
+        <h3 class="card-title">Acicalao Reggaeton Vibes</h3>
+        <p class="card-description">Spanish/Latin reggaeton blend featuring Bad Bunny, Marc Anthony, Santana, and Rue de Vivre.</p>
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6jToaLaNlcrRvvygOCZO4i?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <a href="https://open.spotify.com/playlist/6jToaLaNlcrRvvygOCZO4i" target="_blank" class="btn btn-primary">
+          <span>≡ƒÄº</span> Stream the Vibe
+        </a>
+      </div>
+    </div>
+
+    <!-- Sidebar (Right Side) -->
+    <div class="sidebar">
+      <!-- Additional Playlists Carousel -->
+      <div class="sidebar-card">
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">More Playlists</h3>
+        <div class="carousel">
+          <div class="carousel-track">
             <div class="carousel-item">
+              <div class="compact-playlist">
+                <h4>HITS: Women </h4>
+                <p>Celebrating incredible female artists and their powerful voices.</p>
+                <a href="https://open.spotify.com/playlist/2S676Ysy6lBZkYqdHFYQoQ" target="_blank">≡ƒÄº Stream the vibe</a>
+                          <div class="carousel-item">
               <div class="compact-playlist">
                 <h4>LOFI LAKE COMO</h4>
                 <p>Arab/Persian/Balkan 2020 blend + Rue de Vivre.</p>
                 <a href="https://open.spotify.com/playlist/5Ay14ELdDyr5U9FUf6FfPL" target="_blank">🎧 Stream the vibe</a>
               </div>
+            </div></div>
+              <div class="compact-playlist">
+                <h4>MorningBrew Bossa Nova Chill</h4>
+                <p>Smooth bossa nova vibes to start your day right.</p>
+                <a href="https://open.spotify.com/playlist/1hKhrLHN4WliXFzH2DuAjB" target="_blank">≡ƒÄº Stream the vibe</a>
+              </div>
             </div>
+            <div class="carousel-item">
+              <div class="compact-playlist">
+                <h4>MorningBrew Jazz Classics LOFI</h4>
+                <p>Classic jazz with modern lofi production for relaxed mornings.</p>
+                <a href="https://open.spotify.com/playlist/3WC0mTKjR0Q8HdAnYP5zCt" target="_blank">≡ƒÄº Stream the vibe</a>
+              </div>
+              <div class="compact-playlist">
+                <h4>Sundown Vibes | Rap Reggae 10 HR BLISS</h4>
+                <p>Extended rap and reggae vibes for your evening wind-down.</p>
+                <a href="https://open.spotify.com/playlist/5W7z4W93kHJU8HIgYxYU0J" target="_blank">≡ƒÄº Stream the vibe</a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="compact-playlist">
+                <h4>Spotify Chart Toppers - Gym, Coffee, likes</h4>
+                <p>Current hits perfect for workouts and coffee sessions.</p>
+                <a href="https://open.spotify.com/playlist/7sU1PGsAAmF5y7bW6tAPsY" target="_blank">≡ƒÄº Stream the vibe</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coffee Book Ad -->
+      <div class="sidebar-card card-book">
+        <div style="text-align: center; margin-bottom: 1rem;">
+          <img src="https://github.com/fetch247/curator/raw/main/coffee_connoisseur.png" alt="Coffee Bar Connoisseur" class="coffee-logo" />
+        </div>
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ƒôû Coffee Rituals</h3>
+        <p class="card-description" style="font-size: 0.9rem;">Our coffee recipes book guides you through espresso classics and imaginative brews.</p>
+        <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+          <span>≡ƒôû</span> Explore the Book
+        </a>
+      </div>
+
+      <!-- Coffee Purchase Box -->
+      <div class="sidebar-card coffee-purchase-box">
+        <div style="text-align: center; margin-bottom: 1rem;">
+          <img src="coffee-without it header.png" alt="Coffee Package" class="package-image" />
+        </div>
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-amber);">Γÿò Premium Coffee</h3>
+        <p class="card-description" style="font-size: 0.9rem;">Get the perfect coffee beans to match your vibes. Curated selections for every taste.</p>
+        <div class="coffee-buttons">
+          <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-amber), var(--accent-purple)); color: white;">
+            <span>≡ƒ¢Æ</span> Buy Coffee Beans
+          </a>
+          <a href="mailto:info@coffeebarconnoisseur.com?subject=Coffee Inquiry" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-green), var(--accent-blue)); color: white;">
+            <span>≡ƒôº</span> Custom Blend Request
+          </a>
+        </div>
+      </div>
+
+      <!-- Apple Music Ad -->
+      <div class="sidebar-card card-apple">
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ƒìÄ Support Rue de Vivre</h3>
+        <p class="card-description" style="font-size: 0.9rem;">Show some love by streaming or purchasing our music on Apple Music.</p>
+        <a href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank" class="btn btn-apple" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+          <span>≡ƒìÄ</span> Listen on Apple Music
+        </a>
+      </div>
+      <!-- Book Series Box (under Apple) -->
+      <div class="sidebar-card card-books">
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ƒôÜ Devil's Gambit Book Series</h3>
+        <p class="card-description" style="font-size: 0.9rem;">Explore the Devil's Gambit series on Amazon.</p>
+        <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+          <span>≡ƒôû</span> View Book Series
+        </a>
+      </div>
+      <!-- Rue de Vivre Albums Rotator -->
+      <div class="sidebar-card card-albums">
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ƒÄ╡ Rue de Vivre Albums</h3>
+        <iframe id="rdv-album-frame" data-testid="embed-iframe" style="border-radius:12px;width:100%;height:352px;border:none;border-radius:12px;" src="https://open.spotify.com/embed/album/0pGlg9xLn2OQrlsMKX2e8Y?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div style="display:flex;gap:.4rem;justify-content:center;margin-top:.6rem;">
+          <button class="btn btn-primary" style="font-size:.75rem;padding:.4rem .8rem;" onclick="rdvPrev()">ΓÇ╣ Prev</button>
+          <button class="btn btn-primary" style="font-size:.75rem;padding:.4rem .8rem;" onclick="rdvNext()">Next ΓÇ║</button>
+        </div>
+      </div>
+
+
+      <!-- Coffee Deals (cbc.png) -->
+      <div class="sidebar-card card-deals">
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ƒöÑ Deals On Coffee</h3>
+        <div style="text-align: center; margin-bottom: 0.8rem;">
+          <img src="cbc.png" alt="Coffee Bar Connoisseur Deals" class="package-image" />
+        </div>
+        <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
+          <span>≡ƒ¢ì∩╕Å</span> Shop Coffee Deals
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="callout">
+    <div class="callout-content">
+      <h2>From Steam to Soul: Coffee Recipes & Playlists</h2>
+      <p>Explore the art of coffee with our illustrated recipe book and video series. Want a bespoke vibe for your shop? Reach out and we'll curate a playlist tailored to your atmosphere.</p>
+      <a href="mailto:info@coffeebarconnoisseur.com?subject=Custom Playlist Inquiry" target="_blank" class="btn btn-primary">
+        <span>╬ô┬ú├½Γê⌐Γòò├à</span> Request a Custom Playlist
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="mailto:info@coffeebarconnoisseur.com">Contact Us</a>
+      <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank">Book Recipes</a>
+      <a href="mailto:info@coffeebarconnoisseur.com?subject=Custom Playlist Inquiry" target="_blank">Custom Playlist</a>
+    </div>
+    
+    <div style="margin: 2rem 0; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 16px; backdrop-filter: blur(10px);">
+      <h4 style="color: var(--accent-green); margin-bottom: 1rem; text-align: center;">All Coffee Bar Connoisseur Playlists</h4>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+        <a href="https://open.spotify.com/playlist/4qPIPw6PIfUFIpsoFrAIlQ" target="_blank" style="color: var(--accent-amber); text-decoration: none; font-size: 0.9rem;">Sundown Vibes AFROBEAT</a>
+        <a href="https://open.spotify.com/playlist/1EaQK9jmCLaYt4kUwXzyei" target="_blank" style="color: var(--accent-pink); text-decoration: none; font-size: 0.9rem;">5HR ENERGY DRILL PARTY</a>
+        <a href="https://open.spotify.com/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem;">DJmix-UltimatePARTY</a>
+        <a href="https://open.spotify.com/playlist/2S676Ysy6lBZkYqdHFYQoQ" target="_blank" style="color: var(--accent-green); text-decoration: none; font-size: 0.9rem;">HITS: Women Front & Center</a>
+        <a href="https://open.spotify.com/playlist/1hKhrLHN4WliXFzH2DuAjB" target="_blank" style="color: var(--accent-purple); text-decoration: none; font-size: 0.9rem;">MorningBrew Bossa Nova Chill</a>
+        <a href="https://open.spotify.com/playlist/3WC0mTKjR0Q8HdAnYP5zCt" target="_blank" style="color: var(--accent-amber); text-decoration: none; font-size: 0.9rem;">MorningBrew Jazz Classics LOFI</a>
+        <a href="https://open.spotify.com/playlist/5W7z4W93kHJU8HIgYxYU0J" target="_blank" style="color: var(--accent-pink); text-decoration: none; font-size: 0.9rem;">Sundown Vibes | Rap Reggae 10 HR BLISS</a>
+        <a href="https://open.spotify.com/playlist/7sU1PGsAAmF5y7bW6tAPsY" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem;">Spotify Chart Toppers - Gym, Coffee, likes</a>
+      </div>
+      <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary); font-size: 0.8rem;">
+        <a href="https://open.spotify.com/user/31rm56e5ngi5elvjrs4mozpsaocm" target="_blank" style="color: var(--accent-green); text-decoration: none;">Follow our complete Spotify profile ╬ô├Ñ├å</a>
+      </p>
+    </div>
+    
+    <p class="footer-text">┬⌐ 2025 Coffee Bar Connoisseur ΓÇó Crafted by Rue de Vivre</p>
+  </footer>
+
+  <script>
+    // Add smooth scroll and intersection observer for animations
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add staggered animation delays to cards
+      const cards = document.querySelectorAll('.playlist-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+
+      // Add hover sound effects (optional)
+      const buttons = document.querySelectorAll('.btn');
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-2px) scale(1.05)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Add parallax effect to hero logo
+      window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const logo = document.querySelector('.hero-logo');
+        if (logo) {
+          logo.style.transform = `translateY(${scrolled * 0.1}px)`;
+        }
+      });
+
+      // Zapier Integration - Manual trigger for testing
+      window.triggerSocialMediaUpdate = function(playlistId, playlistName) {
+        // This function can be called manually or by other events
+        console.log(`Triggering social media update for: ${playlistName}`);
+        
+        // You can add a webhook call here if you set up the webhook server
+        // fetch('/webhook/playlist-update', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({
+        //     playlist_id: playlistId,
+        //     playlist_name: playlistName,
+        //     update_type: 'manual'
+        //   })
+        // });
+        
+        // For now, just log the action
+        alert(`Social media update triggered for: ${playlistName}`);
+      };
+
+      // Add click tracking for analytics
+      const spotifyLinks = document.querySelectorAll('a[href*="open.spotify.com"]');
+      spotifyLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          console.log('Spotify playlist clicked:', this.href);
+          // You can add analytics tracking here
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
 
