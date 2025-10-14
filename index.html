@@ -708,10 +708,10 @@
         <div style="text-align: center; margin-bottom: 1rem;">
           <img src="https://github.com/fetch247/curator/raw/main/coffee_connoisseur.png" alt="Coffee Bar Connoisseur" class="coffee-logo" />
         </div>
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ƒôû Coffee Rituals</h3>
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">📖 Coffee Rituals</h3>
         <p class="card-description" style="font-size: 0.9rem;">Our coffee recipes book guides you through espresso classics and imaginative brews.</p>
         <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-          <span>≡ƒôû</span> Explore the Book
+          <span>📖</span> Explore the Book
         </a>
       </div>
 
@@ -724,20 +724,20 @@
         <p class="card-description" style="font-size: 0.9rem;">Get the perfect coffee beans to match your vibes. Curated selections for every taste.</p>
         <div class="coffee-buttons">
           <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-amber), var(--accent-purple)); color: white;">
-            <span>≡ƒ¢Æ</span> Buy Coffee Beans
+            <span>🛒</span> Buy Coffee Beans
           </a>
           <a href="mailto:info@coffeebarconnoisseur.com?subject=Coffee Inquiry" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-green), var(--accent-blue)); color: white;">
-            <span>≡ƒôº</span> Custom Blend Request
+            <span>📧</span> Custom Blend Request
           </a>
         </div>
       </div>
 
       <!-- Apple Music Ad -->
       <div class="sidebar-card card-apple">
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ƒìÄ Support Rue de Vivre</h3>
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">🍎 Support Rue de Vivre</h3>
         <p class="card-description" style="font-size: 0.9rem;">Show some love by streaming or purchasing our music on Apple Music.</p>
         <a href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank" class="btn btn-apple" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-          <span>≡ƒìÄ</span> Listen on Apple Music
+          <span>🍎</span> Listen on Apple Music
         </a>
       </div>
       <!-- Book Series Box (under Apple) -->
@@ -748,6 +748,16 @@
           <span>📖</span> View Book Series
         </a>
       </div>
+      <!-- Rue de Vivre Albums Rotator -->
+      <div class="sidebar-card card-albums">
+        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">🎵 Rue de Vivre Albums</h3>
+        <iframe id="rdv-album-frame" style="width:100%;min-height:232px;border:none;border-radius:12px;" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <div style="display:flex;gap:.4rem;justify-content:center;margin-top:.6rem;">
+          <button class="btn btn-primary" style="font-size:.75rem;padding:.4rem .8rem;" onclick="rdvPrev()">‹ Prev</button>
+          <button class="btn btn-primary" style="font-size:.75rem;padding:.4rem .8rem;" onclick="rdvNext()">Next ›</button>
+        </div>
+      </div>
+
 
       <!-- Coffee Deals (cbc.png) -->
       <div class="sidebar-card card-deals">
@@ -861,4 +871,6 @@
   </script>
 </body>
 </html>
+
+
 
