@@ -1,1014 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Coffee Bar Connoisseur – Vibe Edition">
-  <meta property="og:description" content="Curated playlists for coffee culture: Afrobeat, lofi, jazz, reggaeton, rap, bossa nova, dancehall, dance pop and more.">
-  <meta property="og:image" content="https://fetch247.github.io/curator/coffee_connoisseur.png">
-  <meta property="og:url" content="https://fetch247.github.io/curator/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Coffee Bar Connoisseur">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Coffee Bar Connoisseur – Vibe Edition">
-  <meta name="twitter:description" content="Curated playlists for coffee culture: Afrobeat, lofi, jazz, reggaeton and more.">
-  <meta name="twitter:image" content="https://fetch247.github.io/curator/coffee_connoisseur.png">
-  <title>Coffee Bar Connoisseur Vibe Edition</title>
-    <meta name="description" content="Coffee Bar Connoisseur Vibe Edition. Discover curated playlists and coffee culture: best coffee brewing method 2025, cold brew vs espresso, easy coffee recipes at home, aesthetic coffee setup ideas, CBD coffee benefits, nut milk latte recipes, barista latte art tips, coffee dessert pairing, iced coffee hacks.">
-    <meta name="keywords" content="best coffee brewing method 2025, cold brew vs espresso, easy coffee recipes at home, aesthetic coffee setup ideas, how to make dalgona coffee, CBD coffee benefits, nut milk latte recipes, barista latte art tips, coffee dessert pairing, iced coffee hacks, CoffeeRecipes, BaristaAtHome, caféVibes, LatteArt, ColdBrew, CoffeeLovers, ButterscotchLatte, BrownieCoffee, CoffeeTok, SakuraLatte">
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LXDRBPQLW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8LXDRBPQLW');
-  </script>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
-
-    :root {
-      --bg-primary: #0a0a0f;
-      --bg-secondary: #18181f;
-      --accent-green: #39ff14;
-      --accent-blue: #00ccff;
-      --accent-pink: #ff0066;
-      --accent-amber: #ffb347;
-      --accent-purple: #8b5cf6;
-      --text-primary: #f1f1f1;
-      --text-secondary: #a1a1aa;
-      --glass-bg: rgba(255, 255, 255, 0.05);
-      --glass-border: rgba(255, 255, 255, 0.1);
-      --shadow-neon: 0 0 20px rgba(57, 255, 20, 0.3);
-      --shadow-hover: 0 0 30px rgba(57, 255, 20, 0.5);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
-      color: var(--text-primary);
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-    }
-
-    /* Animated background particles */
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(circle at 20% 80%, rgba(57, 255, 20, 0.03) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 20%, rgba(255, 0, 102, 0.03) 0%, transparent 50%),
-                  radial-gradient(circle at 40% 40%, rgba(0, 204, 255, 0.02) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    /* Header Section */
-    .hero {
-      text-align: center;
-      padding: 4rem 2rem 3rem;
-      position: relative;
-    }
-
-    .hero-logo {
-      width: 280px;
-      max-width: 80%;
-      border-radius: 20px;
-      filter: drop-shadow(0 0 30px rgba(57, 255, 20, 0.4));
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-    }
-
-    .hero-logo:hover {
-      transform: scale(1.05);
-      filter: drop-shadow(0 0 40px rgba(57, 255, 20, 0.6));
-    }
-
-    .hero h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3.5rem;
-      font-weight: 900;
-      background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
-      margin-bottom: 1rem;
-      animation: neonFlicker 4s infinite alternate;
-      letter-spacing: 2px;
-    }
-
-    @keyframes neonFlicker {
-      0%, 18%, 22%, 25%, 53%, 57%, 100% {
-        text-shadow: 0 0 20px rgba(57, 255, 20, 0.5),
-                     0 0 40px rgba(57, 255, 20, 0.3),
-                     0 0 60px rgba(57, 255, 20, 0.1);
-      }
-      20%, 24%, 55% {
-        text-shadow: 0 0 10px rgba(57, 255, 20, 0.3),
-                     0 0 20px rgba(57, 255, 20, 0.1);
-      }
-    }
-
-    .hero .tagline {
-      font-size: 1.2rem;
-      color: var(--text-secondary);
-      font-weight: 300;
-      letter-spacing: 0.5px;
-      margin-bottom: 2rem;
-    }
-
-    /* Main Container - Two Column Layout */
-    .main-container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-
-    /* Featured Playlists (Left Side) */
-    .featured-playlists {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
-    /* Sidebar (Right Side) */
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      position: sticky;
-      top: 2rem;
-    }
-
-    /* Glassmorphism Cards */
-    .playlist-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      border-radius: 24px;
-      border: 1px solid var(--glass-border);
-      padding: 2rem;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .playlist-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.02), transparent);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .playlist-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-hover);
-      border-color: rgba(57, 255, 20, 0.3);
-    }
-
-    .playlist-card:hover::before {
-      opacity: 1;
-    }
-
-    /* Card Type Variants */
-    .card-sundown {
-      border-left: 4px solid var(--accent-amber);
-    }
-
-    .card-sundown:hover {
-      box-shadow: 0 0 30px rgba(255, 179, 71, 0.4);
-    }
-
-    .card-energy {
-      border-left: 4px solid var(--accent-pink);
-    }
-
-    .card-energy:hover {
-      box-shadow: 0 0 30px rgba(255, 0, 102, 0.4);
-    }
-
-    .card-party {
-      border-left: 4px solid var(--accent-blue);
-    }
-
-    .card-party:hover {
-      box-shadow: 0 0 30px rgba(0, 204, 255, 0.4);
-    }
-
-    .card-book {
-      border-left: 4px solid var(--accent-purple);
-    }
-
-    .card-book:hover {
-      box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
-    }
-
-    .card-apple {
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(255, 0, 102, 0.1));
-      border-left: 4px solid var(--accent-green);
-    }
-
-    .card-apple:hover {
-      box-shadow: 0 0 30px rgba(57, 255, 20, 0.4);
-    }
-
-    /* Sidebar Cards - Smaller and Rotating */
-    .sidebar-card {
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      border-radius: 20px;
-      border: 1px solid var(--glass-border);
-      padding: 1.5rem;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      min-height: 200px;
-    }
-
-    .sidebar-card:hover {
-      transform: translateY(-4px) rotateY(5deg);
-      box-shadow: var(--shadow-hover);
-    }
-
-    /* Carousel Styles */
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.5s ease;
-      animation: slide 15s infinite;
-    }
-
-    @keyframes slide {
-      0%, 20% { transform: translateX(0); }
-      25%, 45% { transform: translateX(-100%); }
-      50%, 70% { transform: translateX(-200%); }
-      75%, 95% { transform: translateX(-300%); }
-      100% { transform: translateX(0); }
-    }
-
-    .carousel-item {
-      min-width: 100%;
-      padding: 0 0.5rem;
-    }
-
-    /* Compact Playlist Cards */
-    .compact-playlist {
-      background: var(--glass-bg);
-      backdrop-filter: blur(15px);
-      border-radius: 16px;
-      border: 1px solid var(--glass-border);
-      padding: 1.2rem;
-      margin-bottom: 1rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .compact-playlist:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
-    }
-
-    .compact-playlist h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--text-primary);
-    }
-
-    .compact-playlist p {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      margin-bottom: 0.8rem;
-    }
-
-    .compact-playlist a {
-      font-size: 0.75rem;
-      padding: 0.4rem 0.8rem;
-      border-radius: 20px;
-      background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
-      color: #000;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .compact-playlist a:hover {
-      transform: scale(1.05);
-    }
-
-    /* Coffee Purchase Box Styles */
-    .coffee-purchase-box {
-      background: linear-gradient(135deg, rgba(255, 179, 71, 0.1), rgba(139, 92, 246, 0.1));
-      border-left: 4px solid var(--accent-amber);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .coffee-purchase-box:hover {
-      box-shadow: 0 0 30px rgba(255, 179, 71, 0.4);
-      transform: translateY(-4px);
-    }
-
-    .coffee-logo {
-      width: 80px;
-      height: 80px;
-      border-radius: 12px;
-      filter: drop-shadow(0 0 15px rgba(57, 255, 20, 0.3));
-      transition: all 0.3s ease;
-    }
-
-    .coffee-logo:hover {
-      transform: scale(1.05);
-      filter: drop-shadow(0 0 20px rgba(57, 255, 20, 0.5));
-    }
-
-    .package-image {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 12px;
-      filter: drop-shadow(0 0 15px rgba(255, 179, 71, 0.3));
-      transition: all 0.3s ease;
-    }
-
-    .package-image:hover {
-      filter: drop-shadow(0 0 20px rgba(255, 179, 71, 0.5));
-    }
-
-    .coffee-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .btn-coffee {
-      font-size: 0.8rem;
-      padding: 0.5rem 1rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      text-align: center;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.3rem;
-    }
-
-    .btn-coffee:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Card Headers */
-    .card-title {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, var(--text-primary), var(--text-secondary));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .card-description {
-      color: var(--text-secondary);
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-      font-size: 0.95rem;
-    }
-
-    /* Spotify Embeds */
-    .spotify-embed {
-      width: 100%;
-      height: 352px;
-      border: none;
-      border-radius: 16px;
-      background: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(10px);
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.875rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-      border: none;
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-
-    .btn-primary {
-      background: linear-gradient(45deg, var(--accent-green), var(--accent-blue));
-      color: #000;
-      box-shadow: 0 4px 15px rgba(57, 255, 20, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(57, 255, 20, 0.5);
-    }
-
-    .btn-apple {
-      background: linear-gradient(45deg, #ff6b6b, #ffa726, #42a5f5);
-      color: white;
-      box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-    }
-
-    .btn-apple:hover {
-      transform: translateY(-2px) scale(1.05);
-      box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
-    }
-
-    /* Callout Section */
-    .callout {
-      text-align: center;
-      padding: 4rem 2rem;
-      background: var(--glass-bg);
-      backdrop-filter: blur(20px);
-      border-radius: 32px;
-      margin: 3rem 2rem;
-      border: 1px solid var(--glass-border);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .callout::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: conic-gradient(from 0deg, transparent, rgba(57, 255, 20, 0.1), transparent);
-      animation: rotate 10s linear infinite;
-    }
-
-    @keyframes rotate {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    .callout-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .callout h2 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 900;
-      background: linear-gradient(45deg, var(--accent-pink), var(--accent-purple));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.5rem;
-      text-shadow: 0 0 20px rgba(255, 0, 102, 0.3);
-    }
-
-    .callout p {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 3rem 2rem;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid var(--glass-border);
-      margin-top: 4rem;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-links a {
-      color: var(--accent-green);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .footer-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--accent-green);
-      transition: width 0.3s ease;
-    }
-
-    .footer-links a:hover::after {
-      width: 100%;
-    }
-
-    .footer-links a:hover {
-      color: var(--accent-blue);
-      text-shadow: 0 0 8px rgba(0, 204, 255, 0.5);
-    }
-
-    .footer-text {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1024px) {
-      .main-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-      
-      .sidebar {
-        position: static;
-        order: -1;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      
-      .main-container {
-        padding: 1rem;
-        gap: 1.5rem;
-      }
-      
-      .playlist-card {
-        padding: 1.5rem;
-      }
-      
-      .sidebar-card {
-        padding: 1.2rem;
-      }
-      
-      .callout {
-        margin: 2rem 1rem;
-        padding: 3rem 1.5rem;
-      }
-      
-      .callout h2 {
-        font-size: 2rem;
-      }
-      
-      .footer-links {
-        flex-direction: column;
-        gap: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding: 2rem 1rem;
-      }
-      
-      .hero h1 {
-        font-size: 2rem;
-      }
-      
-      .hero .tagline {
-        font-size: 1rem;
-      }
-    }
-
-    /* Loading Animation */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .fade-in {
-      animation: fadeInUp 0.6s ease-out;
-    }\r\n  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACKBEAT // Coffee Bar Connoisseur Magazine</title>
+    
+    <!-- GOOGLE ANALYTICS TRACKING -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LXDRBPQLW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8LXDRBPQLW');
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --charcoal: #121212;
+            --graphite: #1c1c1c;
+            --board-bg: #222222;
+            --vogue-white: #ffffff;
+            --accent-green: #39ff14;
+            --accent-blue: #00ccff;
+            --accent-pink: #ff0066;
+            --text-gray: #a0a0a0;
+        }
+
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--charcoal);
+            color: var(--vogue-white);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* VOGUE HEADER */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #333;
+            background: #000;
+        }
+        .hero-logo { width: 120px; margin-bottom: 10px; opacity: 0.9; }
+        .mag-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            letter-spacing: -3px;
+            text-transform: uppercase;
+            line-height: 0.8;
+        }
+        .mag-sub {
+            font-family: 'Orbitron';
+            font-size: 0.7rem;
+            letter-spacing: 6px;
+            color: var(--accent-green);
+            margin-top: 15px;
+        }
+
+        /* GRID LAYOUT */
+        .master-container {
+            display: grid;
+            grid-template-columns: 320px 1fr 340px;
+            gap: 1px;
+            background: #333;
+            max-width: 1700px;
+            margin: 0 auto;
+            border: 1px solid #333;
+        }
+
+        .col {
+            background: var(--graphite);
+            padding: 25px;
+            height: 1400px;
+            overflow-y: auto;
+        }
+        .col::-webkit-scrollbar { width: 4px; }
+        .col::-webkit-scrollbar-thumb { background: var(--accent-green); }
+
+        /* LEFT: 10 PLAYLISTS */
+        .section-label {
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
+            border-bottom: 2px solid var(--accent-green);
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .spotify-list { display: flex; flex-direction: column; gap: 15px; }
+
+        /* CENTER: RPG BOARD & VIDEOS */
+        .center-col { background: var(--charcoal); padding: 20px; }
+        
+        .quest-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.7rem;
+            font-family: 'Orbitron';
+        }
+        .stat-card span { display: block; font-size: 1.1rem; color: var(--accent-blue); margin-top: 5px; }
+
+        /* THE RPG BOARD - SQUARE CHARCOAL */
+        .rpg-square {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            aspect-ratio: 1 / 1;
+            background: var(--board-bg);
+            border: 2px solid #444;
+            padding: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .rpg-square h2 { font-family: 'Orbitron'; color: var(--accent-green); margin-bottom: 15px; font-size: 1rem; }
+        .rpg-text { font-size: 1rem; line-height: 1.5; color: #eee; margin-bottom: 20px; }
+
+        .doodle-container {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            filter: invert(1);
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+        .action-btn {
+            background: #222;
+            border: 1px solid #555;
+            color: #fff;
+            padding: 12px;
+            font-family: 'Inter';
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .action-btn:hover { background: var(--accent-green); color: #000; border-color: #fff; }
+
+        /* VIDEO GRID */
+        .video-section-title { font-family: 'Orbitron'; text-align: center; margin: 40px 0 20px; color: var(--accent-blue); }
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .video-card { background: #000; border: 1px solid #333; position: relative; }
+        .video-card iframe { width: 100%; aspect-ratio: 16/9; border: none; }
+        .watch-label { padding: 10px; font-size: 0.7rem; font-family: 'Orbitron'; background: #111; display: block; }
+
+        /* RIGHT: BOOK & APPLE MUSIC */
+        .book-promo {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            color: #000;
+            margin-bottom: 30px;
+        }
+        .book-promo img { width: 100%; max-width: 220px; margin-bottom: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .book-promo h3 { font-family: 'Playfair Display'; font-size: 1.5rem; margin-bottom: 10px; }
+        .amazon-link {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 800;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #1a1a1a;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            border-bottom: 1px solid #333;
+            font-weight: bold;
+            font-size: 0.75rem;
+            transition: 0.3s;
+            font-family: 'Orbitron';
+        }
+        .social-link:hover { background: var(--vogue-white); color: #000; }
+
+        /* FOOTER */
+        footer {
+            background: #000;
+            padding: 80px 40px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            border-top: 2px solid #333;
+        }
+        .footer-col h4 { font-family: 'Orbitron'; font-size: 0.7rem; color: var(--accent-green); margin-bottom: 20px; letter-spacing: 2px; }
+        .footer-col a { display: block; color: #777; text-decoration: none; margin-bottom: 12px; font-size: 0.8rem; }
+        .footer-col a:hover { color: #fff; }
+
+        @media (max-width: 1200px) {
+            .master-container { grid-template-columns: 1fr; }
+            .col { height: auto; }
+        }
+    </style>
 </head>
 <body>
-  <section class="hero fade-in">
-    <img src="coffee_connoisseur.png" alt="Coffee Bar Connoisseur" class="hero-logo" />
-    <h1>Coffee Bar Connoisseur</h1>
-    <p class="tagline">Playlists brewed to match your energy</p>
-  </section>
 
-  <section class="main-container">
-    <!-- Featured Playlists (Left Side) -->
-    <div class="featured-playlists">
-      <div class="playlist-card card-sundown fade-in">
-        <h3 class="card-title">Sundown Vibes: Afrobeat</h3>
-        <p class="card-description">Golden hour energy with smooth afrobeat rhythms. Perfect for winding down with your favorite brew.</p>
-        <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ?utm_source=generator&amp;theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        <a href="https://open.spotify.com/playlist/4qPIPw6PIfUFIpsoFrAIlQ" target="_blank" class="btn btn-primary">Stream the Vibe</a>
-      </div>
+<header>
+    <img src="coffee_connoisseur.png" alt="CBC" class="hero-logo">
+    <div class="mag-title">Backbeat</div>
+    <div class="mag-sub">The Deceptive Promises Investigation // HQ</div>
+</header>
 
-      <div class="playlist-card card-energy fade-in">
-        <h3 class="card-title">5HR Energy Drill Party</h3>
-        <p class="card-description">High-octane drill beats to fuel your energy. Turn up the volume and feel the power.</p>
-        <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei?utm_source=generator" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        <a href="https://open.spotify.com/playlist/1EaQK9jmCLaYt4kUwXzyei" target="_blank" class="btn btn-primary">Stream the Vibe</a>
-      </div>
-
-      <div class="playlist-card card-party fade-in">
-        <h3 class="card-title">DJmix: Ultimate Party</h3>
-        <p class="card-description">The ultimate party mix for when you need maximum energy. Let the beats take control.</p>
-        <iframe class="spotify-embed" src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm?utm_source=generator&amp;theme=0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        <a href="https://open.spotify.com/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" target="_blank" class="btn btn-primary">Stream the Vibe</a>
-      </div>
-      <!-- Acicalao Reggaeton Vibes (embedded after DJmix) -->
-      <div class="playlist-card card-party fade-in">
-        <h3 class="card-title">Acicalao Reggaeton Vibes</h3>
-        <p class="card-description">Spanish/Latin reggaeton blend featuring Bad Bunny, Marc Anthony, Santana, and #RuedeVivre.</p>
-        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6jToaLaNlcrRvvygOCZO4i?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <a href="https://open.spotify.com/playlist/6jToaLaNlcrRvvygOCZO4i" target="_blank" class="btn btn-primary">Stream the Vibe</a>
-      </div>
-      <div class="playlist-card card-party fade-in">
-        <h3 class="card-title">FULL ON POP</h3>
-        <p class="card-description">K-pop & J-pop top songs from 2020 +.</p>
-        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0f6VFnUl9NtHUEWjgjomnB?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <a href="https://open.spotify.com/playlist/0f6VFnUl9NtHUEWjgjomnB" target="_blank" class="btn btn-primary">Stream the Vibe</a>
-      </div>
-
+<div class="master-container">
+    
+    <!-- LEFT: 10 PLAYLISTS -->
+    <div class="col">
+        <h2 class="section-label">The Aux Rack</h2>
+        <div class="spotify-list">
+            <iframe src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/6jToaLaNlcrRvvygOCZO4i" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/0f6VFnUl9NtHUEWjgjomnB" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/2S676Ysy6lBZkYqdHFYQoQ" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/1hKhrLHN4WliXFzH2DuAjB" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/3WC0mTKjR0Q8HdAnYP5zCt" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/5W7z4W93kHJU8HIgYxYU0J" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/5Ay14ELdDyr5U9FUf6FfPL" width="100%" height="152" frameBorder="0"></iframe>
+        </div>
     </div>
 
-    <!-- Sidebar (Right Side) -->
-    <div class="sidebar">
-      <!-- Additional Playlists Carousel -->
-      <div class="sidebar-card">
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">More Playlists</h3>
-        <div class="carousel">
-          <div class="carousel-track">            <div class="carousel-item">
-              <div class="compact-playlist">
-                <h4>FULL ON POP</h4>
-                <p>K‑pop & J‑pop top 2020 — solid blend.</p>
-                <a href="https://open.spotify.com/playlist/0f6VFnUl9NtHUEWjgjomnB" target="_blank">🎧 Stream the vibe</a>
-              </div>
+    <!-- CENTER: RPG BOARD & VIDEO GRID -->
+    <div class="col center-col">
+        <div class="quest-stats">
+            <div class="stat-card">REPUTATION <span id="rep">50</span></div>
+            <div class="stat-card">RESOURCES <span id="res">$0.003</span></div>
+            <div class="stat-card">EVIDENCE <span id="evi">0%</span></div>
+            <div class="stat-card">ALLIES <span id="all">1</span></div>
+        </div>
+
+        <div class="rpg-square">
+            <h2>HUNTING THE VILLAIN</h2>
+            <p class="rpg-text" id="game-text">
+                The cables in the Manhattan elevator look thin. Adrien is smiling. Elizabeth Woods is waiting for your signal.
+            </p>
+            <div class="doodle-container">
+                <svg viewBox="0 0 100 100">
+                    <circle cx="50" cy="20" r="10" stroke="white" stroke-width="2" fill="none"/>
+                    <path d="M50 30 L50 70 M30 50 L70 50 M50 70 L30 90 M50 70 L70 90" stroke="white" stroke-width="2"/>
+                </svg>
             </div>
-            <div class="carousel-item">
-              <div class="compact-playlist">
-                <h4>HITS: Women </h4>
-                <p>Celebrating incredible female artists and their powerful voices.</p>
-                <a href="https://open.spotify.com/playlist/2S676Ysy6lBZkYqdHFYQoQ" target="_blank">🎧 Stream the vibe</a>
-                          <div class="carousel-item">
-              <div class="compact-playlist">
-                <h4>LOFI LAKE COMO</h4>
-                <p>Arab/Persian/Balkan 2020 blend + Rue de Vivre.</p>
-                <a href="https://open.spotify.com/playlist/5Ay14ELdDyr5U9FUf6FfPL" target="_blank">🎧 Stream the vibe</a>
-              </div>
-            </div></div>
-              <div class="compact-playlist">
-                <h4>MorningBrew Bossa Nova Chill</h4>
-                <p>Smooth bossa nova vibes to start your day right.</p>
-                <a href="https://open.spotify.com/playlist/1hKhrLHN4WliXFzH2DuAjB" target="_blank">🎧 Stream the vibe</a>
-              </div>
+        </div>
+
+        <div class="nav-grid">
+            <button class="action-btn" onclick="quest('investigate')">Siphon Data</button>
+            <button class="action-btn" onclick="quest('recruit')">Contact Rachel</button>
+            <button class="action-btn" onclick="quest('confront')">Accuse Adrien</button>
+            <button class="action-btn" onclick="quest('disappear')">Go Dark</button>
+        </div>
+
+        <h3 class="video-section-title">WATCH NOW // DECODED MEDIA</h3>
+        <div class="video-grid">
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/ALGOPLAYLIST" title="Algo Playlist" frameborder="0" allowfullscreen></iframe>
+                <span class="watch-label">ALGO PLAYLIST // VIBE 01</span>
             </div>
-            <div class="carousel-item">
-              <div class="compact-playlist">
-                <h4>MorningBrew Jazz Classics LOFI</h4>
-                <p>Classic jazz with modern lofi production for relaxed mornings.</p>
-                <a href="https://open.spotify.com/playlist/3WC0mTKjR0Q8HdAnYP5zCt" target="_blank">🎧 Stream the vibe</a>
-              </div>
-              <div class="compact-playlist">
-                <h4>Sundown Vibes | Rap Reggae 10 HR BLISS</h4>
-                <p>Extended rap and reggae vibes for your evening wind-down.</p>
-                <a href="https://open.spotify.com/playlist/5W7z4W93kHJU8HIgYxYU0J" target="_blank">🎧 Stream the vibe</a>
-              </div>
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/DECODEDMUSIC" title="Decoded Music" frameborder="0" allowfullscreen></iframe>
+                <span class="watch-label">INSIDE THE INDUSTRY // VIBE 02</span>
             </div>
-            <div class="carousel-item">
-              <div class="compact-playlist">
-                <h4>Spotify Chart Toppers - Gym, Coffee, likes</h4>
-                <p>Current hits perfect for workouts and coffee sessions.</p>
-                <a href="https://open.spotify.com/playlist/7sU1PGsAAmF5y7bW6tAPsY" target="_blank">🎧 Stream the vibe</a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <!-- Coffee Book Ad -->
-      <div class="sidebar-card card-book">
-        <div style="text-align: center; margin-bottom: 1rem;">
-          <img src="https://github.com/fetch247/curator/raw/main/coffee_connoisseur.png" alt="Coffee Bar Connoisseur" class="coffee-logo" />
-        </div>
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">📖 Coffee Rituals</h3>
-        <p class="card-description" style="font-size: 0.9rem;">Our coffee recipes book guides you through espresso classics and imaginative brews.</p>
-        <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-          <span>📖</span> Explore the Book
-        </a>
-      </div>
-
-      <!-- Coffee Purchase Box -->
-      <div class="sidebar-card coffee-purchase-box">
-        <div style="text-align: center; margin-bottom: 1rem;">
-          <img src="coffee-without it header.png" alt="Coffee Package" class="package-image" />
-        </div>
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem; color: var(--accent-amber);">☕ Premium Coffee</h3>
-        <p class="card-description" style="font-size: 0.9rem;">Get the perfect coffee beans to match your vibes. Curated selections for every taste.</p>
-        <div class="coffee-buttons">
-          <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-amber), var(--accent-purple)); color: white;">
-            <span>≡</span> Buy Coffee Beans
-          </a>
-          <a href="mailto:info@coffeebarconnoisseur.com?subject=Coffee Inquiry" target="_blank" class="btn-coffee" style="background: linear-gradient(45deg, var(--accent-green), var(--accent-blue)); color: white;">
-            <span>≡</span> Custom Blend Request
-          </a>
-        </div>
-      </div>
-
-      <!-- Apple Music Ad -->
-      <div class="sidebar-card card-apple">
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">🍎 Support Rue de Vivre</h3>
-        <p class="card-description" style="font-size: 0.9rem;">Show some love by streaming or purchasing our music on Apple Music.</p>
-        <a href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank" class="btn btn-apple" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-          <span>🍎</span> Listen on Apple Music
-        </a>
-      </div>
-      <!-- Book Series Box (under Apple) -->
-      <div class="sidebar-card card-books">
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡Devil's Gambit Book Series</h3>
-        <p class="card-description" style="font-size: 0.9rem;">Explore the Devil's Gambit series on Amazon.</p>
-        <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-          <span>📖</span> View Book Series
-        </a>
-      </div>
-      <!-- Rue de Vivre Albums Rotator -->
-      <div class="sidebar-card card-albums">
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ Rue de Vivre Albums</h3>
-        <iframe id="rdv-album-frame" data-testid="embed-iframe" style="border-radius:12px;width:100%;height:352px;border:none;border-radius:12px;" src="https://open.spotify.com/embed/album/0pGlg9xLn2OQrlsMKX2e8Y?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        <div style="display:flex;gap:.4rem;justify-content:center;margin-top:.6rem;">
-          <button class="btn btn-primary" style="font-size:.75rem;padding:.4rem .8rem;" onclick="rdvPrev()"> Prev</button>
-          <button class="btn btn-primary" style="font-size:.75rem;padding:.4rem .8rem;" onclick="rdvNext()">Next </button>
-        </div>
-      </div>
-
-
-      <!-- Coffee Deals (cbc.png) -->
-      <div class="sidebar-card card-deals">
-        <h3 class="card-title" style="font-size: 1.2rem; margin-bottom: 1rem;">≡ Deals On Coffee</h3>
-        <div style="text-align: center; margin-bottom: 0.8rem;">
-          <img src="cbc.png" alt="Coffee Bar Connoisseur Deals" class="package-image" />
-        </div>
-        <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.6rem 1.2rem;">
-          <span>≡</span> Shop Coffee Deals
-        </a>
-      </div>
     </div>
-  </section>
 
-  <section class="callout">
-    <div class="callout-content">
-      <h2>From Steam to Soul: Coffee Recipes & Playlists</h2>
-      <p>Explore the art of coffee with our illustrated recipe book and video series. Want a bespoke vibe for your shop? Reach out and we'll curate a playlist tailored to your atmosphere.</p>
-      <a href="mailto:info@coffeebarconnoisseur.com?subject=Custom Playlist Inquiry" target="_blank" class="btn btn-primary">
-        <span></span> Request a Custom Playlist
-      </a>
+    <!-- RIGHT: THE BOOK & SOUNDTRACK & APPLE MUSIC -->
+    <div class="col">
+        <div class="book-promo">
+            <img src="https://i.imgur.com/GzLzGfR.jpeg" alt="Backbeat Book Cover">
+            <h3>Backbeat</h3>
+            <p style="font-size: 0.8rem; color: #555;">By Thomas Miller // Thriller</p>
+            <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank" class="amazon-link">Buy on Amazon</a>
+        </div>
+
+        <h2 class="section-label">The Soundtrack</h2>
+        <iframe style="border-radius:12px; margin-bottom: 20px;" src="https://open.spotify.com/embed/album/6gKsEmOL4fEgIoxyq0ZPOc?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+        <div class="social-shelf">
+            <a href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank" class="social-link" style="background: #fa243c; color: #fff;">
+                APPLE MUSIC // RUE DE VIVRE
+            </a>
+            <a href="https://www.tiktok.com/@decodedmusic1" target="_blank" class="social-link">TIKTOK @DECODEDMUSIC1</a>
+            <a href="https://www.youtube.com/@ALGOPLAYLIST" target="_blank" class="social-link">YOUTUBE @ALGOPLAYLIST</a>
+            <a href="https://decodedmusic.com" target="_blank" class="social-link">DECODEDMUSIC.COM</a>
+        </div>
     </div>
-  <div class="featured-descriptions" style="margin-top:0.8rem; font-size:12px; color: var(--text-secondary); max-width:700px; margin-left:auto; margin-right:auto; background: var(--glass-bg); border:1px solid var(--glass-border); padding:12px; border-radius:12px; line-height:1.6; list-style:none;">
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4 style="margin:0 0 0.25rem 0;">DJmix: Ultimate Party</h4>
-    <p style="margin:0.2rem 0; color: var(--text-secondary);">
-      Style: PARTY/DJ • non-stop momentum. For fans of David Guetta, Tiësto, Calvin Harris, Peggy Gou.  
-      Use it for pre-game energy, dance-floor warmup, getting your flex.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>5HR ENERGY DRILL PARTY</h4>
-    <p>
-      Style: DRILL • high-octane, focused energy. For fans of Central Cee, Pop Smoke, Headie One, Ice Spice.  
-      Use it for long commutes, heavy lifts, power walks.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/1EaQK9jmCLaYt4kUwXzyei" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>Sundown Vibes: AFROBEAT</h4>
-    <p>
-      Style: AFROBEAT • warm, rhythmic, evening-ready. For fans of Burna Boy, Wizkid, Tems, Rema.  
-      Use it for golden-hour drives, unhurried dinners, soft landings.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/4qPIPw6PIfUFIpsoFrAIlQ" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>MorningBrew Bossa Nova Chill</h4>
-    <p>
-      Style: BOSSA NOVA • smooth, café-friendly detail. For fans of João Gilberto, Astrud Gilberto, Stan Getz.  
-      Use it for soft morning coffee, reading hour, deep focus.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/1hKhrLHN4WliXFzH2DuAjB" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>MorningBrew Jazz Classics LOFI</h4>
-    <p>
-      Style: JAZZ/LOFI • classic tone, modern ease. For fans of Miles Davis (reimagined), Chet Baker (lofi edits), Bill Evans moods.  
-      Use it for late-night edits, creative flow, slow Sundays.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/3WC0mTKjR0Q8HdAnYP5zCt" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>HITS: Women Front & Center</h4>
-    <p>
-      Style: POP/R&B (women-led) • confident, melodic. Use it for daily lift, getting ready, bright afternoons.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/2S676Ysy6lBZkYqdHFYQoQ" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>Sundown Vibes | Rap Reggae 10 HR BLISS</h4>
-    <p>
-      Style: RAP/REGGAE • relaxed, rolling cadence. Use it for waiting for your train, long commutes, easy resets.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/5W7z4W93kHJU8HIgYxYU0J" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>LOFI LAKE COMO</h4>
-    <p>
-      Style: LOFI/CHILL • cinematic lounge. Use it for deep focus, soft morning coffee, golden-hour breeze.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/5Ay14ELdDyr5U9FUf6FfPL" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>FULL ON POP</h4>
-    <p>
-      Style: K/J-POP • glossy hooks, polished energy. For fans of BTS, BLACKPINK, TWICE, NewJeans.  
-      Use it for study sprints, commuting, mood lifts.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/0f6VFnUl9NtHUEWjgjomnB" target="_blank">Listen on Spotify</a></li>
-  </div>
-
-  <div style="margin:0.8rem 0 1.0rem 0;">
-    <h4>Acicalao Reggaeton Vibes</h4>
-    <p>
-      Style: REGGAETON • modern Latin heat. For fans of Bad Bunny, Karol G, J Balvin, Feid.  
-      Use it for steps with pace, warm nights, easy moves.
-    </p>
-    <li><a href="https://open.spotify.com/playlist/6jToaLaNlcrRvvygOCZO4i" target="_blank">Listen on Spotify</a></li>
-  </div>
-
 </div>
 
-  
-</section>
-
-  <footer>
-    <div class="footer-links">
-      <a href="mailto:info@coffeebarconnoisseur.com">Contact Us</a>
-      <a href="https://www.amazon.com/s?k=coffee+beans&ref=nb_sb_noss" target="_blank">Book Recipes</a>
-      <a href="mailto:info@coffeebarconnoisseur.com?subject=Custom Playlist Inquiry" target="_blank">Custom Playlist</a>
+<footer>
+    <div class="footer-col">
+        <h4>VIBE CHANNELS</h4>
+        <a href="#">Sundown Afrobeat</a>
+        <a href="#">5HR Energy Drill</a>
+        <a href="#">Bossa Nova Chill</a>
+        <a href="mailto:info@coffeebarconnoisseur.com">Contact Us</a>
     </div>
-    
-    <div style="margin: 2rem 0; padding: 1.5rem; background: rgba(255,255,255,0.05); border-radius: 16px; backdrop-filter: blur(10px);">
-      <h4 style="color: var(--accent-green); margin-bottom: 1rem; text-align: center;">All Coffee Bar Connoisseur Playlists</h4>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
-        <a href="https://open.spotify.com/playlist/4qPIPw6PIfUFIpsoFrAIlQ" target="_blank" style="color: var(--accent-amber); text-decoration: none; font-size: 0.9rem;">Sundown Vibes AFROBEAT</a>
-        <a href="https://open.spotify.com/playlist/1EaQK9jmCLaYt4kUwXzyei" target="_blank" style="color: var(--accent-pink); text-decoration: none; font-size: 0.9rem;">5HR ENERGY DRILL PARTY</a>
-        <a href="https://open.spotify.com/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem;">DJmix-UltimatePARTY</a>
-        <a href="https://open.spotify.com/playlist/2S676Ysy6lBZkYqdHFYQoQ" target="_blank" style="color: var(--accent-green); text-decoration: none; font-size: 0.9rem;">HITS: Women Front & Center</a>
-        <a href="https://open.spotify.com/playlist/1hKhrLHN4WliXFzH2DuAjB" target="_blank" style="color: var(--accent-purple); text-decoration: none; font-size: 0.9rem;">MorningBrew Bossa Nova Chill</a>
-        <a href="https://open.spotify.com/playlist/3WC0mTKjR0Q8HdAnYP5zCt" target="_blank" style="color: var(--accent-amber); text-decoration: none; font-size: 0.9rem;">MorningBrew Jazz Classics LOFI</a>
-        <a href="https://open.spotify.com/playlist/5W7z4W93kHJU8HIgYxYU0J" target="_blank" style="color: var(--accent-pink); text-decoration: none; font-size: 0.9rem;">Sundown Vibes | Rap Reggae 10 HR BLISS</a>
-        <a href="https://open.spotify.com/playlist/7sU1PGsAAmF5y7bW6tAPsY" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem;">Spotify Chart Toppers - Gym, Coffee, likes</a>
-              <a href="https://open.spotify.com/playlist/6jToaLaNlcrRvvygOCZO4i" target="_blank" style="color: var(--accent-amber); text-decoration: none; font-size: 0.9rem;">Acicalao Reggaeton Vibes</a>
-        <a href="https://open.spotify.com/playlist/5Ay14ELdDyr5U9FUf6FfPL" target="_blank" style="color: var(--accent-purple); text-decoration: none; font-size: 0.9rem;">LOFI LAKE COMO</a>
-        <a href="https://open.spotify.com/playlist/0f6VFnUl9NtHUEWjgjomnB" target="_blank" style="color: var(--accent-blue); text-decoration: none; font-size: 0.9rem;">FULL ON POP</a></div>
-      <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary); font-size: 0.8rem;">
-        <a href="https://open.spotify.com/user/31rm56e5ngi5elvjrs4mozpsaocm" target="_blank" style="color: var(--accent-green); text-decoration: none;">Follow our complete Spotify profile →</a>
-      </p>
+    <div class="footer-col">
+        <h4>THE NETWORK</h4>
+        <a href="https://www.algocontentseo.com" target="_blank">Algo Content SEO</a>
+        <a href="https://www.algocontentseo.com" target="_blank">The Investigation</a>
+        <a href="https://www.CoffeeBarRoasters.com" target="_blank">Coffee Bar Roasters</a>
+        <a href="https://www.CoffeeBarRoasters.com" target="_blank">The Foundation</a>
     </div>
-    
-    <p class="footer-text"> 2025 Coffee Bar Connoisseur Crafted by RDV</p>
-  </footer>
+    <div class="footer-col">
+        <h4>LITERATURE</h4>
+        <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY">Deceptive Promises</a>
+        <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY">Backbeat: The Thriller</a>
+        <a href="#">Coffee Rituals</a>
+    </div>
+    <div class="footer-col">
+        <h4>RDV MEDIA</h4>
+        <p style="font-size: 0.7rem; color: #444; margin-top: 10px;">&copy; 2025 Coffee Bar Connoisseur. Investigation by Backbeat. Web Ops by RDV.</p>
+    </div>
+</footer>
 
-  <script>
-    // Add smooth scroll and intersection observer for animations
-    document.addEventListener('DOMContentLoaded', function() {
-      // Add staggered animation delays to cards
-      const cards = document.querySelectorAll('.playlist-card');
-      cards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-      });
+<script>
+    let stats = { rep: 50, res: 0.003, evi: 0, all: 1 };
 
-      // Add hover sound effects (optional)
-      const buttons = document.querySelectorAll('.btn');
-      buttons.forEach(button => {
-        button.addEventListener('mouseenter', function() {
-          this.style.transform = 'translateY(-2px) scale(1.05)';
-        });
-        
-        button.addEventListener('mouseleave', function() {
-          this.style.transform = 'translateY(0) scale(1)';
-        });
-      });
-
-      // Add parallax effect to hero logo
-      window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const logo = document.querySelector('.hero-logo');
-        if (logo) {
-          logo.style.transform = `translateY(${scrolled * 0.1}px)`;
+    function quest(type) {
+        const textDisplay = document.getElementById('game-text');
+        if(type === 'investigate') {
+            stats.evi += 15;
+            stats.res -= 0.001;
+            textDisplay.innerHTML = "You dug into the Cypress shell accounts. Data extracted. <span style='color:var(--accent-pink)'>Evidence +15%</span>";
+        } else if(type === 'recruit') {
+            stats.all += 1;
+            stats.rep += 10;
+            textDisplay.innerHTML = "Rachel Woods confirms the money trail leads to PulseBank. You have backup.";
+        } else if(type === 'confront') {
+            if(stats.evi < 60) {
+                stats.rep -= 25;
+                textDisplay.innerHTML = "Adrien's lawyers are laughing. You don't have enough to bury him yet.";
+            } else {
+                stats.rep += 40;
+                textDisplay.innerHTML = "The recording plays. Adrien stops smiling. The board of directors is listening.";
+            }
+        } else if(type === 'disappear') {
+            textDisplay.innerHTML = "You've moved to a burner phone. The hitmen lose your trail for now.";
         }
-      });
 
-      // Zapier Integration - Manual trigger for testing
-      window.triggerSocialMediaUpdate = function(playlistId, playlistName) {
-        // This function can be called manually or by other events
-        console.log(`Triggering social media update for: ${playlistName}`);
-        
-        // You can add a webhook call here if you set up the webhook server
-        // fetch('/webhook/playlist-update', {
-        //   method: 'POST',
-        //   headers: { 'Content-Type': 'application/json' },
-        //   body: JSON.stringify({
-        //     playlist_id: playlistId,
-        //     playlist_name: playlistName,
-        //     update_type: 'manual'
-        //   })
-        // });
-        
-        // For now, just log the action
-        alert(`Social media update triggered for: ${playlistName}`);
-      };
+        document.getElementById('rep').innerText = stats.rep;
+        document.getElementById('res').innerText = "$" + stats.res.toFixed(3);
+        document.getElementById('evi').innerText = stats.evi + "%";
+        document.getElementById('all').innerText = stats.all;
+    }
+</script>
 
-      // Add click tracking for analytics
-      const spotifyLinks = document.querySelectorAll('a[href*="open.spotify.com"]');
-      spotifyLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          console.log('Spotify playlist clicked:', this.href);
-          // You can add analytics tracking here
-        });
-      });
-    });
-  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
