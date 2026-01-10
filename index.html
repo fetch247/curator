@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BACKBEAT // Coffee Bar Connoisseur Magazine</title>
+    <title>Best Music for Coffee // Coffee Bar Playlist Curation // Backbeat</title>
     
-    <!-- GOOGLE ANALYTICS TRACKING -->
+    <!-- SEO METADATA: GOOGLE TRENDING WORDS -->
+    <meta name="description" content="Explore the best music for coffee, top beats for work and productivity, and professional coffee bar playlist curation. Clean workplace music by Rue de Vivre.">
+    <meta name="keywords" content="best music for coffee, best coffee recipes, coffee bar playlist curation, best beats for work and productivity, clean workplace music, lofi coffee shop music, best coffee brewing method 2025, iced coffee hacks">
+
+    <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8LXDRBPQLW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -14,300 +18,320 @@
       gtag('config', 'G-8LXDRBPQLW');
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     
     <style>
         :root {
             --charcoal: #121212;
             --graphite: #1c1c1c;
-            --board-bg: #222222;
+            --board-bg: #1a1a1a;
             --vogue-white: #ffffff;
             --accent-green: #39ff14;
             --accent-blue: #00ccff;
             --accent-pink: #ff0066;
-            --text-gray: #a0a0a0;
         }
 
-        /* RESET & BASE */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background-color: var(--charcoal);
             color: var(--vogue-white);
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        /* VOGUE HEADER */
+        /* HEADER */
         header {
             text-align: center;
-            padding: 40px 20px;
-            border-bottom: 1px solid #333;
+            padding: 50px 20px;
+            border-bottom: 2px solid #333;
             background: #000;
         }
-        .hero-logo { width: 120px; margin-bottom: 10px; opacity: 0.9; }
         .mag-title {
             font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            letter-spacing: -3px;
+            font-size: 5rem;
+            letter-spacing: -2px;
             text-transform: uppercase;
-            line-height: 0.8;
         }
         .mag-sub {
             font-family: 'Orbitron';
-            font-size: 0.7rem;
-            letter-spacing: 6px;
+            font-size: 0.9rem;
+            letter-spacing: 5px;
             color: var(--accent-green);
             margin-top: 15px;
         }
 
-        /* GRID LAYOUT */
+        /* MASTER CONTAINER */
         .master-container {
             display: grid;
-            grid-template-columns: 320px 1fr 340px;
+            grid-template-columns: 360px 1fr 380px;
             gap: 1px;
-            background: #333;
-            max-width: 1700px;
+            background: #444;
+            max-width: 1800px;
             margin: 0 auto;
-            border: 1px solid #333;
         }
 
         .col {
             background: var(--graphite);
-            padding: 25px;
-            height: 1400px;
+            padding: 30px;
+            height: 1600px;
             overflow-y: auto;
         }
-        .col::-webkit-scrollbar { width: 4px; }
-        .col::-webkit-scrollbar-thumb { background: var(--accent-green); }
 
-        /* LEFT: 10 PLAYLISTS */
         .section-label {
             font-family: 'Orbitron';
-            font-size: 0.8rem;
-            border-bottom: 2px solid var(--accent-green);
-            margin-bottom: 20px;
-            padding-bottom: 5px;
+            font-size: 1rem;
+            border-bottom: 3px solid var(--accent-green);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
             text-transform: uppercase;
+            color: var(--accent-blue);
         }
-        .spotify-list { display: flex; flex-direction: column; gap: 15px; }
 
-        /* CENTER: RPG BOARD & VIDEOS */
-        .center-col { background: var(--charcoal); padding: 20px; }
+        /* CENTER COLUMN - THE HUB */
+        .center-col { background: var(--charcoal); }
         
-        .quest-stats {
+        .stat-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .stat-card {
-            background: #1a1a1a;
+            background: #000;
             border: 1px solid #333;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
-            font-size: 0.7rem;
             font-family: 'Orbitron';
+            font-size: 0.75rem;
         }
-        .stat-card span { display: block; font-size: 1.1rem; color: var(--accent-blue); margin-top: 5px; }
+        .stat-card span { display: block; font-size: 1.4rem; color: var(--accent-green); }
 
-        /* THE RPG BOARD - SQUARE CHARCOAL */
-        .rpg-square {
+        /* THE SPLIT BOARD (VIDEO + RPG) */
+        .hub-split {
+            display: flex;
+            gap: 15px;
+            align-items: stretch;
+            margin-bottom: 30px;
+        }
+
+        .hub-video-container {
+            flex: 1;
+            background: #000;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hub-video-container video {
             width: 100%;
-            max-width: 500px;
-            margin: 0 auto;
-            aspect-ratio: 1 / 1;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rpg-square {
+            flex: 1.2;
             background: var(--board-bg);
-            border: 2px solid #444;
-            padding: 30px;
+            border: 2px solid var(--accent-blue);
+            padding: 25px;
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            min-height: 400px;
         }
-        .rpg-square h2 { font-family: 'Orbitron'; color: var(--accent-green); margin-bottom: 15px; font-size: 1rem; }
-        .rpg-text { font-size: 1rem; line-height: 1.5; color: #eee; margin-bottom: 20px; }
+        .rpg-text { font-size: 1.15rem; color: #fff; line-height: 1.4; }
 
+        /* STICK FIGURE - HIGH VIZ GREEN */
         .doodle-container {
             position: absolute;
-            bottom: 20px;
-            right: 20px;
-            width: 80px;
-            filter: invert(1);
+            bottom: 15px;
+            right: 15px;
+            width: 70px;
+        }
+        .doodle-container svg circle, 
+        .doodle-container svg path {
+            stroke: var(--accent-green) !important;
+            stroke-width: 5;
         }
 
         .nav-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-            margin: 20px auto;
-            max-width: 500px;
+            margin-bottom: 40px;
         }
         .action-btn {
             background: #222;
-            border: 1px solid #555;
+            border: 1px solid #444;
             color: #fff;
-            padding: 12px;
-            font-family: 'Inter';
-            font-weight: 600;
+            padding: 15px;
+            font-weight: 800;
             text-transform: uppercase;
             cursor: pointer;
-            transition: 0.3s;
+            font-family: 'Orbitron';
+            font-size: 0.8rem;
         }
-        .action-btn:hover { background: var(--accent-green); color: #000; border-color: #fff; }
+        .action-btn:hover { background: var(--accent-green); color: #000; }
 
-        /* VIDEO GRID */
-        .video-section-title { font-family: 'Orbitron'; text-align: center; margin: 40px 0 20px; color: var(--accent-blue); }
+        /* VIDEO GRID BELOW HUB */
         .video-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        .video-card { background: #000; border: 1px solid #333; position: relative; }
-        .video-card iframe { width: 100%; aspect-ratio: 16/9; border: none; }
-        .watch-label { padding: 10px; font-size: 0.7rem; font-family: 'Orbitron'; background: #111; display: block; }
+        .video-card iframe { width: 100%; aspect-ratio: 16/9; border: 1px solid #333; }
 
-        /* RIGHT: BOOK & APPLE MUSIC */
+        /* RIGHT COLUMN */
         .book-promo {
-            background: #fff;
-            padding: 20px;
-            text-align: center;
-            color: #000;
-            margin-bottom: 30px;
-        }
-        .book-promo img { width: 100%; max-width: 220px; margin-bottom: 15px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
-        .book-promo h3 { font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 10px; }
-        .amazon-link {
-            display: inline-block;
             background: #000;
-            color: #fff;
-            padding: 10px 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #333;
+            margin-bottom: 40px;
+        }
+        .book-promo img { 
+            width: 100%; 
+            display: block;
+            margin: 0 auto 20px auto;
+            border: 1px solid #444;
+        }
+        .book-promo h3 { font-family: 'Playfair Display'; font-size: 2rem; color: #fff; margin-bottom: 10px; }
+        .amazon-btn {
+            background: var(--vogue-white);
+            color: #000;
+            padding: 12px 24px;
             text-decoration: none;
             font-weight: 800;
-            margin-top: 10px;
             text-transform: uppercase;
-            font-size: 1.5rem;
+            display: inline-block;
         }
 
         .social-link {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            background: #1a1a1a;
+            background: #111;
             color: #fff;
+            padding: 18px;
             text-decoration: none;
-            padding: 15px;
-            border-bottom: 1px solid #333;
-            font-weight: bold;
-            font-size: 1.5rem;
-            transition: 0.3s;
             font-family: 'Orbitron';
+            font-size: 0.85rem;
+            border-bottom: 1px solid #222;
         }
-        .social-link:hover { background: var(--vogue-white); color: #000; }
+        .social-link:hover { background: #fa243c; }
 
         /* FOOTER */
         footer {
             background: #000;
-            padding: 80px 40px;
+            padding: 60px 40px;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            border-top: 2px solid #333;
+            gap: 30px;
+            border-top: 3px solid var(--accent-green);
         }
-        .footer-col h4 { font-family: 'Orbitron'; font-size: 0.7rem; color: var(--accent-green); margin-bottom: 20px; letter-spacing: 2px; }
-        .footer-col a { display: block; color: #777; text-decoration: none; margin-bottom: 12px; font-size: 0.8rem; }
-        .footer-col a:hover { color: #fff; }
+        .footer-col a { color: #888; text-decoration: none; display: block; margin-bottom: 10px; font-size: 0.9rem; }
+        .footer-col a:hover { color: var(--accent-green); }
 
         @media (max-width: 1200px) {
             .master-container { grid-template-columns: 1fr; }
             .col { height: auto; }
+            .hub-split { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="coffee_connoisseur.png" alt="CBC" class="hero-logo">
     <div class="mag-title">Backbeat</div>
-    <div class="mag-sub">The Deceptive Promises Investigation // HQ</div>
+    <div class="mag-sub">Best Music for Coffee // Playlist Curation // Clean Workplace Music</div>
 </header>
 
 <div class="master-container">
     
-    <!-- LEFT: 10 PLAYLISTS -->
+    <!-- LEFT: PLAYLISTS -->
     <div class="col">
-        <h2 class="section-label">The Aux Rack</h2>
+        <h2 class="section-label">Best Beats for Work</h2>
         <div class="spotify-list">
-            <iframe src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/6jToaLaNlcrRvvygOCZO4i" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/0f6VFnUl9NtHUEWjgjomnB" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/2S676Ysy6lBZkYqdHFYQoQ" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/1hKhrLHN4WliXFzH2DuAjB" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/3WC0mTKjR0Q8HdAnYP5zCt" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/5W7z4W93kHJU8HIgYxYU0J" width="100%" height="152" frameBorder="0"></iframe>
-            <iframe src="https://open.spotify.com/embed/playlist/5Ay14ELdDyr5U9FUf6FfPL" width="100%" height="152" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/4qPIPw6PIfUFIpsoFrAIlQ" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/1EaQK9jmCLaYt4kUwXzyei" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/6mpnPV8vQlyPAJ8mgrB3Cm" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/6jToaLaNlcrRvvygOCZO4i" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/0f6VFnUl9NtHUEWjgjomnB" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/2S676Ysy6lBZkYqdHFYQoQ" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/1hKhrLHN4WliXFzH2DuAjB" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/3WC0mTKjR0Q8HdAnYP5zCt" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/5W7z4W93kHJU8HIgYxYU0J" width="100%" height="200" frameBorder="0"></iframe>
+            <iframe src="https://open.spotify.com/embed/playlist/5Ay14ELdDyr5U9FUf6FfPL" width="100%" height="200" frameBorder="0"></iframe>
         </div>
     </div>
 
-    <!-- CENTER: RPG BOARD & VIDEO GRID -->
+    <!-- CENTER: HUB -->
     <div class="col center-col">
-        <div class="quest-stats">
+        <div class="stat-grid">
             <div class="stat-card">REPUTATION <span id="rep">50</span></div>
             <div class="stat-card">RESOURCES <span id="res">$0.003</span></div>
             <div class="stat-card">EVIDENCE <span id="evi">0%</span></div>
             <div class="stat-card">ALLIES <span id="all">1</span></div>
         </div>
 
-        <div class="rpg-square">
-            <h2>HUNTING THE VILLAIN</h2>
-            <p class="rpg-text" id="game-text">
-                The cables in the Manhattan elevator look thin. Adrien is smiling. Elizabeth Woods is waiting for your signal.
-            </p>
-            <div class="doodle-container">
-                <svg viewBox="0 0 100 100">
-                    <circle cx="50" cy="20" r="10" stroke="white" stroke-width="2" fill="none"/>
-                    <path d="M50 30 L50 70 M30 50 L70 50 M50 70 L30 90 M50 70 L70 90" stroke="white" stroke-width="2"/>
-                </svg>
+        <!-- NEW SPLIT HUB -->
+        <div class="hub-split">
+            <div class="hub-video-container">
+                <!-- Replace 'backbeat_teaser.mp4' with the actual filename -->
+                <video autoplay muted loop playsinline>
+                    <source src="backbeat_teaser.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="rpg-square">
+                <h3 style="font-family: Orbitron; color: var(--accent-pink); font-size: 0.9rem; margin-bottom: 10px;">STATUS: HUNTING</h3>
+                <p class="rpg-text" id="game-text">
+                    "Payment Delayed." The text from an unknown number glows. Adrien is watching. Do you siphon the server or run?
+                </p>
+                <div class="doodle-container">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50" cy="20" r="10" fill="none"/>
+                        <path d="M50 30 L50 70 M30 50 L70 50 M50 70 L30 90 M50 70 L70 90"/>
+                    </svg>
+                </div>
             </div>
         </div>
 
         <div class="nav-grid">
-            <button class="action-btn" onclick="quest('investigate')">Siphon Data</button>
-            <button class="action-btn" onclick="quest('recruit')">Contact Rachel</button>
-            <button class="action-btn" onclick="quest('confront')">Accuse Adrien</button>
+            <button class="action-btn" onclick="quest('investigate')">Siphon Backend</button>
+            <button class="action-btn" onclick="quest('recruit')">Signal Rachel</button>
+            <button class="action-btn" onclick="quest('confront')">Expose Mystery</button>
             <button class="action-btn" onclick="quest('disappear')">Go Dark</button>
         </div>
 
-        <h3 class="video-section-title">WATCH NOW // DECODED MEDIA</h3>
+        <h3 class="section-label" style="text-align: center;">Decoded Media Grid</h3>
         <div class="video-grid">
             <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/ALGOPLAYLIST" title="Algo Playlist" frameborder="0" allowfullscreen></iframe>
-                <span class="watch-label">ALGO PLAYLIST // VIBE 01</span>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
             </div>
             <div class="video-card">
-                <iframe src="https://www.youtube.com/embed/DECODEDMUSIC" title="Decoded Music" frameborder="0" allowfullscreen></iframe>
-                <span class="watch-label">INSIDE THE INDUSTRY // VIBE 02</span>
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
             </div>
         </div>
     </div>
 
-    <!-- RIGHT: THE BOOK & SOUNDTRACK & APPLE MUSIC -->
+    <!-- RIGHT: PROMO -->
     <div class="col">
         <div class="book-promo">
-            <img src="Cover.png" alt="Backbeat Book Cover">
+            <!-- Ensure Cover.png is in the same folder -->
+            <img src="Cover.png" alt="Backbeat Thriller" onerror="this.style.display='none'">
             <h3>Backbeat</h3>
-            <p style="font-size: 1.5rem; color: #555;">By Thomas Miller // Thriller</p>
-            <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank" class="amazon-link">Buy on Amazon</a>
+            <p style="font-size: 0.85rem; margin-bottom: 15px;">A Thomas Miller Investigation</p>
+            <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY" target="_blank" class="amazon-btn">Amazon Store</a>
         </div>
 
-        <h2 class="section-label">The Soundtrack</h2>
-        <iframe style="border-radius:12px; margin-bottom: 20px;" src="https://open.spotify.com/embed/album/6gKsEmOL4fEgIoxyq0ZPOc?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <h2 class="section-label">Deceptive Promises OST</h2>
+        <iframe style="border-radius:12px; margin-bottom: 25px;" src="https://open.spotify.com/embed/album/6gKsEmOL4fEgIoxyq0ZPOc?utm_source=generator&theme=0" width="100%" height="380" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 
         <div class="social-shelf">
-            <a href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank" class="social-link" style="background: #fa243c; color: #fff;">
+            <a href="https://music.apple.com/us/artist/rue-de-vivre/1802574638" target="_blank" class="social-link" style="background: #fa243c;">
                 APPLE MUSIC // RUE DE VIVRE
             </a>
             <a href="https://www.tiktok.com/@decodedmusic1" target="_blank" class="social-link">TIKTOK @DECODEDMUSIC1</a>
@@ -319,56 +343,42 @@
 
 <footer>
     <div class="footer-col">
-        <h4>VIBE CHANNELS</h4>
-        <a href="#">Sundown Afrobeat</a>
-        <a href="#">5HR Energy Drill</a>
-        <a href="#">Bossa Nova Chill</a>
+        <h4>Best Music for Coffee</h4>
         <a href="mailto:info@coffeebarconnoisseur.com">Contact Us</a>
     </div>
     <div class="footer-col">
-        <h4>THE NETWORK</h4>
+        <h4>The Investigation</h4>
         <a href="https://www.algocontentseo.com" target="_blank">Algo Content SEO</a>
-        <a href="https://www.algocontentseo.com" target="_blank">The Investigation</a>
+        <a href="https://www.algocontentseo.com" target="_blank">Industry Secrets</a>
+    </div>
+    <div class="footer-col">
+        <h4>The Foundation</h4>
         <a href="https://www.CoffeeBarRoasters.com" target="_blank">Coffee Bar Roasters</a>
-        <a href="https://www.CoffeeBarRoasters.com" target="_blank">The Foundation</a>
+        <a href="https://www.CoffeeBarRoasters.com" target="_blank">Stefan Vogt Foundation</a>
     </div>
     <div class="footer-col">
-        <h4>LITERATURE</h4>
-        <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY">Deceptive Promises</a>
-        <a href="https://www.amazon.com/stores/Thomas-Miller/author/B0DRYXMJTY">Backbeat: The Thriller</a>
-        <a href="#">Coffee Rituals</a>
-    </div>
-    <div class="footer-col">
-        <h4>RDV MEDIA</h4>
-        <p style="font-size: 0.7rem; color: #444; margin-top: 10px;">&copy; 2025 Coffee Bar Connoisseur. Investigation by Backbeat. Web Ops by RDV.</p>
+        <h4>© 2025 RDV MEDIA</h4>
+        <p style="font-size: 0.7rem; color: #444;">Backbeat Thriller Series // Clean Workplace Curation</p>
     </div>
 </footer>
 
 <script>
     let stats = { rep: 50, res: 0.003, evi: 0, all: 1 };
-
     function quest(type) {
-        const textDisplay = document.getElementById('game-text');
+        const text = document.getElementById('game-text');
         if(type === 'investigate') {
-            stats.evi += 15;
-            stats.res -= 0.001;
-            textDisplay.innerHTML = "You dug into the Cypress shell accounts. Data extracted. <span style='color:var(--accent-pink)'>Evidence +15%</span>";
+            stats.evi += 20; stats.res -= 0.001;
+            text.innerHTML = "Backend siphoned. You found the Cyprus offshore logs. <span style='color:var(--accent-pink)'>Evidence +20%</span>";
         } else if(type === 'recruit') {
-            stats.all += 1;
-            stats.rep += 10;
-            textDisplay.innerHTML = "Rachel Woods confirms the money trail leads to PulseBank. You have backup.";
+            stats.all += 1; stats.rep += 15;
+            text.innerHTML = "Rachel Woods provides a safe house and burner phone.";
         } else if(type === 'confront') {
             if(stats.evi < 60) {
-                stats.rep -= 25;
-                textDisplay.innerHTML = "Adrien's lawyers are laughing. You don't have enough to bury him yet.";
+                stats.rep -= 40; text.innerHTML = "Adrien's lawyers handed you a lawsuit. You failed.";
             } else {
-                stats.rep += 40;
-                textDisplay.innerHTML = "The recording plays. Adrien stops smiling. The board of directors is listening.";
+                stats.rep += 50; text.innerHTML = "The logs are live. The board is turning. You've won.";
             }
-        } else if(type === 'disappear') {
-            textDisplay.innerHTML = "You've moved to a burner phone. The hitmen lose your trail for now.";
         }
-
         document.getElementById('rep').innerText = stats.rep;
         document.getElementById('res').innerText = "$" + stats.res.toFixed(3);
         document.getElementById('evi').innerText = stats.evi + "%";
