@@ -34,4 +34,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://coffeebarconnosseur.com/sitemap.xml
+Sitemap: https://coffeebarconnoisseur.com/sitemap.xml

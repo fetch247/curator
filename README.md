@@ -1,4 +1,4 @@
-# coffeebarconnosseur.com — GITplay
+# coffeebarconnoisseur.com — GITplay
 
 Everything in this folder goes into your git repo root, as-is.
 
@@ -11,6 +11,7 @@ sitemap.xml                                 ← submit to Google Search Console
 llms.txt                                    ← AI-assistant discovery file (Gemini/GPT/Claude)
 articles/coffee-shop-music-curation.html    ← long-form SEO article #1
 articles/backbeat-deceptive-promises.html   ← long-form SEO article #2
+.nojekyll                                   ← tells GitHub Pages to skip Jekyll (serve files as-is)
 ```
 
 ## Two files you must add yourself (referenced by index.html)
@@ -29,10 +30,8 @@ git push
 ## After deploy
 
 1. Google Search Console → submit `sitemap.xml` and request indexing for all 3 pages.
-2. Verify robots: https://coffeebarconnosseur.com/robots.txt and /llms.txt load.
-3. Spelling check: this repo uses **coffeebarconnosseur.com** (as you wrote it) for all
-   canonical URLs, but the email uses **coffeebarconnoisseur.com** (from the old site).
-   If the real domain is spelled differently, find-and-replace across all files.
+2. Verify robots: https://coffeebarconnoisseur.com/robots.txt and /llms.txt load.
+3. Domain + email confirmed: **coffeebarconnoisseur.com** everywhere.
 
 ## How the live features work (no API keys)
 
